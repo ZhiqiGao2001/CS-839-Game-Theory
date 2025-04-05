@@ -1,0 +1,44 @@
+{
+    "gpt-4o-mini": {
+        "structured": {
+            "scan": {
+                "success": 2,
+                "failure": 0
+            },
+            "bad": {
+                "success": 3,
+                "failure": 0
+            },
+            "comm": {
+                "success": 2,
+                "failure": 0
+            },
+            "land": {
+                "success": 1,
+                "failure": 0
+            },
+            "sample": {
+                "success": 2,
+                "failure": 0
+            }
+        },
+        "unstructured": {
+            "comm": {
+                "success": 2,
+                "failure": 0
+            },
+            "sample": {
+                "success": 6,
+                "failure": 0
+            },
+            "bad": {
+                "success": 0,
+                "failure": 1
+            },
+            "land": {
+                "success": 1,
+                "failure": 0
+            }
+        }
+    }
+}

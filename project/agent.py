@@ -3,8 +3,11 @@ import time
 from openai import OpenAI
 import ast
 from tqdm import tqdm
-import game_1
 import os
+
+import game_1
+import game_2
+
 
 def dict_matches_string(s, d):
     """
@@ -48,8 +51,8 @@ def dict_matches_string(s, d):
     return is_subset(d, parsed_dict)
 
 
-class CooperativeAgent_game1:
-    def __init__(self, role, model_name='gpt-4o', config_path='config.json'):
+class CooperativeAgent_game_simple:
+    def __init__(self, role, model_name='gpt-4o', config_path='config.json', prompt_=("structured", "unstructured")):
         self.role = role
         self.model_name = model_name
         # Load API key from configuration file
@@ -57,13 +60,15 @@ class CooperativeAgent_game1:
             keys = json.load(f)
             self.openai_api_key = keys.get("openai_api_key", None)
         self.openai_client = OpenAI(api_key=self.openai_api_key)
+        self.structured_message = prompt_[0]
+        self.unstructured_message = prompt_[1]
 
     def making_response(self, incoming_message, structured=False):
         # Send the message to the OpenAI API and get a response
         if structured:
-            system_prompt = game_1.protocol_system_message
+            system_prompt = self.structured_message
         else:
-            system_prompt = game_1.default_system_message
+            system_prompt = self.unstructured_message
         prompt_detail = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": incoming_message},
@@ -100,7 +105,8 @@ def run_tests_game_1(testing_agent, N_test=500, structured=True):
 
 
 def game_1_run(N_count=100, model_name='gpt-4o', save=False):
-    testing_agent = CooperativeAgent_game1("role", model_name=model_name)
+    prompt = (game_1.protocol_system_message, game_1.default_system_message)
+    testing_agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
 
     # content, correct_response = game_1.gather_message(structured=False)
     # print("Incoming message:", content)
@@ -151,7 +157,59 @@ def save_result(target_path, model_name, overall_results):
         json.dump(data, f, indent=4)
 
 
+def run_tests_game_2(testing_agent, N_test=500, structured=True):
+    """
+    Run tests for game_2 for a given number of messages and mode (structured or unstructured).
+    Returns a dictionary with the success and failure counts for each message type.
+    """
+    results = {}  # Dictionary keyed by message_type with {"success": count, "failure": count}
+    for i in tqdm(range(N_test), desc="Testing Game 2", unit="message"):
+        # Generate a random message using the provided mode (structured or unstructured)
+        (message_content, correct_response), message_type = game_2.random_message(structured=structured)
+        # Get the agent's response according to the mode
+        llm_response = testing_agent.making_response(message_content, structured=structured)
+        # Initialize the result entry for this message type if needed
+        if message_type not in results:
+            results[message_type] = {"success": 0, "failure": 0}
+        # Check if the agent's response matches the correct response
+        if dict_matches_string(llm_response, correct_response):
+            results[message_type]["success"] += 1
+        else:
+            results[message_type]["failure"] += 1
+            print("LLM response:", llm_response)
+            print("Correct Ver:", correct_response)
+    return results
+
+
+def game_2_run(N_count=100, model_name='gpt-4o', save=False):
+    """
+    Run the full testing suite for game_2 using both structured and unstructured messages.
+    """
+    # Initialize the testing agent for game_2
+    prompt = (game_2.protocol_system_message, game_2.default_system_message)
+    testing_agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
+
+    # Run tests for both structured and unstructured messages.
+    structured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=True)
+    unstructured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=False)
+
+    # Combine the results into one dictionary for comparison.
+    overall_results = {
+        "structured": structured_results,
+        "unstructured": unstructured_results
+    }
+
+    # Print out the results.
+    print("Test results (success/failure counts by message type) for Game 2:")
+    print(overall_results)
+
+    # Save the result to a json file if required.
+    if save:
+        target_path = "test_results_game_2.json"
+        save_result(target_path, model_name, overall_results)
+
+
 if __name__ == "__main__":
     # Create an instance of the testing agent.
-    game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
-    1
+    # game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
+    game_2_run(N_count=10, model_name='gpt-4o-mini', save=True)
