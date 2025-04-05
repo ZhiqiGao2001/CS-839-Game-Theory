@@ -1,42 +1,92 @@
 {
     "gpt-4o-mini": {
         "structured": {
-            "scan": {
-                "success": 2,
-                "failure": 0
-            },
             "bad": {
-                "success": 3,
-                "failure": 0
+                "success": 13,
+                "failure": 2
             },
-            "comm": {
-                "success": 2,
+            "sample": {
+                "success": 19,
                 "failure": 0
             },
             "land": {
-                "success": 1,
+                "success": 26,
+                "failure": 0
+            },
+            "comm": {
+                "success": 18,
+                "failure": 0
+            },
+            "scan": {
+                "success": 22,
+                "failure": 0
+            }
+        },
+        "unstructured": {
+            "bad": {
+                "success": 11,
+                "failure": 11
+            },
+            "scan": {
+                "success": 24,
+                "failure": 0
+            },
+            "land": {
+                "success": 21,
                 "failure": 0
             },
             "sample": {
-                "success": 2,
+                "success": 15,
+                "failure": 0
+            },
+            "comm": {
+                "success": 16,
+                "failure": 2
+            }
+        }
+    },
+    "gpt-4o": {
+        "structured": {
+            "bad": {
+                "success": 20,
+                "failure": 1
+            },
+            "scan": {
+                "success": 23,
+                "failure": 0
+            },
+            "sample": {
+                "success": 20,
+                "failure": 1
+            },
+            "comm": {
+                "success": 15,
+                "failure": 0
+            },
+            "land": {
+                "success": 20,
                 "failure": 0
             }
         },
         "unstructured": {
             "comm": {
-                "success": 2,
-                "failure": 0
+                "success": 8,
+                "failure": 17
             },
             "sample": {
-                "success": 6,
+                "success": 14,
                 "failure": 0
             },
             "bad": {
-                "success": 0,
-                "failure": 1
+                "success": 12,
+                "failure": 9
             },
             "land": {
-                "success": 1,
+                "success": 22,
+                "failure": 0
+            },
+            "scan": {
+                "success": 18,
                 "failure": 0
             }
         }

@@ -11,13 +11,25 @@ import game_2
 
 def dict_matches_string(s, d):
     """
-      Given a string `s` containing a dictionary (either as a standalone literal
-      like "{...}" or with an assignment, e.g., "VAR = { ... }")
-      and a dictionary `d`, return True if every key-value pair in `d` matches the corresponding
-      entries in the parsed dictionary from `s`, otherwise return False.
-      """
+    Given a string `s` containing a dictionary (either as a standalone literal
+    like "{...}", with an assignment, e.g., "VAR = { ... }", or wrapped in code blocks
+    such as triple backticks), and a dictionary `d`, return True if every key-value pair in `d`
+    matches the corresponding entries in the parsed dictionary from `s`, otherwise return False.
+    """
     try:
         s = s.strip()
+
+        # Remove code block markers if present (e.g., ```json ... ```).
+        if s.startswith("```"):
+            lines = s.splitlines()
+            # Remove first line if it starts with ```
+            if lines and lines[0].startswith("```"):
+                lines = lines[1:]
+            # Remove last line if it ends with ```
+            if lines and lines[-1].startswith("```"):
+                lines = lines[:-1]
+            s = "\n".join(lines).strip()
+
         # If the string starts with a curly brace, assume it's just the dictionary literal.
         if s[0] == "{":
             dict_str = s
@@ -27,15 +39,20 @@ def dict_matches_string(s, d):
             if len(parts) < 2:
                 return False
             dict_str = parts[1].strip()
-        # Convert the string representation of the dict into a Python dictionary.
-        parsed_dict = ast.literal_eval(dict_str)
+
+        try:
+            # Try to parse using ast.literal_eval first.
+            parsed_dict = ast.literal_eval(dict_str)
+        except Exception:
+            # If that fails, try using json.loads.
+            parsed_dict = json.loads(dict_str)
     except Exception as e:
         # If there's an error in parsing, return False.
         return False
 
     def is_subset(small, big):
         """
-        Check recursively if every key-value pair in `small` is present in `big`.
+        Recursively check if every key-value pair in `small` is present in `big`.
         For nested dictionaries, the check is performed recursively.
         """
         if isinstance(small, dict) and isinstance(big, dict):
@@ -45,6 +62,9 @@ def dict_matches_string(s, d):
                 if not is_subset(v, big[k]):
                     return False
             return True
+        elif isinstance(small, list) and isinstance(big, list):
+            # For lists, require the lists to be equal.
+            return small == big
         else:
             return small == big
 
@@ -176,8 +196,8 @@ def run_tests_game_2(testing_agent, N_test=500, structured=True):
             results[message_type]["success"] += 1
         else:
             results[message_type]["failure"] += 1
-            print("LLM response:", llm_response)
-            print("Correct Ver:", correct_response)
+            # print("LLM response:", llm_response)
+            # print("Correct Ver:", correct_response)
     return results
 
 
@@ -212,4 +232,4 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
 if __name__ == "__main__":
     # Create an instance of the testing agent.
     # game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
-    game_2_run(N_count=10, model_name='gpt-4o-mini', save=True)
+    game_2_run(N_count=100, model_name='gpt-4o', save=True)
