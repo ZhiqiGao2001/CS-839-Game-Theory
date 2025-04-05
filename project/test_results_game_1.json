@@ -1,0 +1,48 @@
+{
+    "gpt-4o-mini": {
+        "structured": {
+            "bad": {
+                "success": 13,
+                "failure": 5
+            },
+            "gather": {
+                "success": 21,
+                "failure": 0
+            },
+            "explore": {
+                "success": 21,
+                "failure": 0
+            },
+            "send": {
+                "success": 26,
+                "failure": 0
+            },
+            "move": {
+                "success": 14,
+                "failure": 0
+            }
+        },
+        "unstructured": {
+            "gather": {
+                "success": 2,
+                "failure": 13
+            },
+            "bad": {
+                "success": 15,
+                "failure": 9
+            },
+            "explore": {
+                "success": 25,
+                "failure": 1
+            },
+            "send": {
+                "success": 5,
+                "failure": 10
+            },
+            "move": {
+                "success": 1,
+                "failure": 19
+            }
+        }
+    }
+}
