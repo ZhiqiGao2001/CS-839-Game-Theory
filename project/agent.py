@@ -196,8 +196,8 @@ def run_tests_game_2(testing_agent, N_test=500, structured=True):
             results[message_type]["success"] += 1
         else:
             results[message_type]["failure"] += 1
-            # print("LLM response:", llm_response)
-            # print("Correct Ver:", correct_response)
+            print("LLM response:", llm_response)
+            print("Correct Ver:", correct_response)
     return results
 
 
@@ -210,8 +210,8 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
     testing_agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
 
     # Run tests for both structured and unstructured messages.
-    structured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=True)
     unstructured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=False)
+    structured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=True)
 
     # Combine the results into one dictionary for comparison.
     overall_results = {
@@ -232,4 +232,4 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
 if __name__ == "__main__":
     # Create an instance of the testing agent.
     # game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
-    game_2_run(N_count=100, model_name='gpt-4o', save=True)
+    game_2_run(N_count=10, model_name='gpt-4o', save=True)
