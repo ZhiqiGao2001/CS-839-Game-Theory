@@ -77,7 +77,7 @@ class CooperativeAgent_game1:
         return content
 
 
-def run_tests(testing_agent, N_test=500, structured=True):
+def run_tests_game_1(testing_agent, N_test=500, structured=True):
     """
     Run tests for a given number of messages and a mode (structured or unstructured).
     Returns a dictionary with the success and failure counts for each message type.
@@ -99,10 +99,7 @@ def run_tests(testing_agent, N_test=500, structured=True):
     return results
 
 
-if __name__ == "__main__":
-    # Create an instance of the testing agent.
-    N_count = 100
-    model_name = 'gpt-4o-mini'
+def game_1_run(N_count=100, model_name='gpt-4o', save=False):
     testing_agent = CooperativeAgent_game1("role", model_name=model_name)
 
     # content, correct_response = game_1.gather_message(structured=False)
@@ -119,8 +116,8 @@ if __name__ == "__main__":
     #
     # exit()
     # Run tests for both structured and unstructured messages.
-    structured_results = run_tests(testing_agent, N_test=N_count, structured=True)
-    unstructured_results = run_tests(testing_agent, N_test=N_count, structured=False)
+    structured_results = run_tests_game_1(testing_agent, N_test=N_count, structured=True)
+    unstructured_results = run_tests_game_1(testing_agent, N_test=N_count, structured=False)
 
     # Combine the results into one dictionary for comparison.
     overall_results = {
@@ -133,15 +130,28 @@ if __name__ == "__main__":
     print(overall_results)
     # save the result to a json file
     # First, open the file in read mode to load the data.
-    if not os.path.exists("test_results_game_1.json"):
-        with open("test_results_game_1.json", "w") as f:
+    if save:
+        target_path = "test_results_game_1.json"
+        # Check if the file exists and create it if not.
+        save_result(target_path, model_name, overall_results)
+
+
+def save_result(target_path, model_name, overall_results):
+    if not os.path.exists(target_path):
+        with open(target_path, "w") as f:
             json.dump({}, f, indent=4)
-    with open("test_results_game_1.json", "r") as f:
+    with open(target_path, "r") as f:
         data = json.load(f)
 
-    # Update the data.
+        # Update the data.
     data[model_name] = overall_results
 
     # Then, open the file in write mode to save the updated data.
-    with open("test_results_game_1.json", "w") as f:
+    with open(target_path, "w") as f:
         json.dump(data, f, indent=4)
+
+
+if __name__ == "__main__":
+    # Create an instance of the testing agent.
+    game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
+    1

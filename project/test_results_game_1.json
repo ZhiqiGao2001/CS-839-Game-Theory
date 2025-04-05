@@ -44,5 +44,51 @@
                 "failure": 19
             }
         }
+    },
+    "gpt-4o": {
+        "structured": {
+            "explore": {
+                "success": 13,
+                "failure": 4
+            },
+            "send": {
+                "success": 14,
+                "failure": 3
+            },
+            "move": {
+                "success": 20,
+                "failure": 6
+            },
+            "bad": {
+                "success": 5,
+                "failure": 11
+            },
+            "gather": {
+                "success": 19,
+                "failure": 5
+            }
+        },
+        "unstructured": {
+            "bad": {
+                "success": 4,
+                "failure": 13
+            },
+            "gather": {
+                "success": 10,
+                "failure": 4
+            },
+            "send": {
+                "success": 8,
+                "failure": 9
+            },
+            "explore": {
+                "success": 23,
+                "failure": 5
+            },
+            "move": {
+                "success": 13,
+                "failure": 11
+            }
+        }
     }
 }
