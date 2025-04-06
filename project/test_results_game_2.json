@@ -47,47 +47,47 @@
     },
     "gpt-4o": {
         "structured": {
-            "bad": {
-                "success": 20,
-                "failure": 1
-            },
-            "scan": {
-                "success": 23,
+            "sample": {
+                "success": 24,
                 "failure": 0
             },
-            "sample": {
-                "success": 20,
-                "failure": 1
+            "scan": {
+                "success": 17,
+                "failure": 0
             },
-            "comm": {
-                "success": 15,
+            "bad": {
+                "success": 16,
                 "failure": 0
             },
             "land": {
-                "success": 20,
+                "success": 18,
+                "failure": 0
+            },
+            "comm": {
+                "success": 25,
                 "failure": 0
             }
         },
         "unstructured": {
-            "comm": {
-                "success": 8,
-                "failure": 17
-            },
-            "sample": {
-                "success": 14,
-                "failure": 0
-            },
             "bad": {
-                "success": 12,
-                "failure": 9
-            },
-            "land": {
-                "success": 22,
-                "failure": 0
+                "success": 15,
+                "failure": 8
             },
             "scan": {
-                "success": 18,
+                "success": 19,
                 "failure": 0
+            },
+            "comm": {
+                "success": 6,
+                "failure": 12
+            },
+            "land": {
+                "success": 23,
+                "failure": 0
+            },
+            "sample": {
+                "success": 16,
+                "failure": 1
             }
         }
     }

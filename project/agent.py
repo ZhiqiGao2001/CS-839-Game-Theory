@@ -196,8 +196,8 @@ def run_tests_game_2(testing_agent, N_test=500, structured=True):
             results[message_type]["success"] += 1
         else:
             results[message_type]["failure"] += 1
-            print("LLM response:", llm_response)
-            print("Correct Ver:", correct_response)
+            # print("LLM response:", llm_response)
+            # print("Correct Ver:", correct_response)
     return results
 
 
@@ -232,4 +232,4 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
 if __name__ == "__main__":
     # Create an instance of the testing agent.
     # game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
-    game_2_run(N_count=10, model_name='gpt-4o', save=True)
+    game_2_run(N_count=100, model_name='gpt-4o', save=True)

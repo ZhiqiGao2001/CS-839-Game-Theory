@@ -48,7 +48,7 @@ Your response must follow this exact structure:
 
 - "TARGET": 
   • "COORDINATE": Provide a coordinate tuple in the form "(x, y)" that indicates the target location. If not applicable, leave it as an empty string ''.
-  • "OBJECT": Provide the object or classification (e.g., "PLANET", "ASTEROID") relevant to the action. If this information is not applicable, leave it as an empty string ''.
+  • "OBJECT": OBJECT_TYPE must be one of: PLANET, ASTEROID, COMET, STAR. If this information is not applicable, leave it as an empty string ''.
 
 - "MATERIAL_DETAIL": 
   • "MATERIAL_TYPE": For SAMPLE commands, include the material type (must be one of: ROCK, ICE, DUST, GAS). For other actions, leave it as an empty string ''.
