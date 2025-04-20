@@ -1,43 +1,43 @@
 {
-  "gpt-4o": {
+  "game1": {
     "structured": {
-      "bad": {
-        "success": 3,
-        "failure": 0
-      },
-      "gather": {
-        "success": 5,
+      "explore": {
+        "success": 4,
         "failure": 0
       },
       "send": {
-        "success": 7,
-        "failure": 0
-      },
-      "move": {
         "success": 2,
         "failure": 0
       },
-      "explore": {
-        "success": 3,
+      "move": {
+        "success": 1,
+        "failure": 1
+      },
+      "gather": {
+        "success": 1,
+        "failure": 0
+      },
+      "bad": {
+        "success": 1,
         "failure": 0
       }
     },
     "unstructured": {
       "bad": {
-        "success": 1,
-        "failure": 3
-      },
-      "move": {
-        "success": 4,
-        "failure": 0
+        "success": 0,
+        "failure": 1
       },
       "explore": {
-        "success": 7,
+        "success": 3,
         "failure": 0
       },
       "send": {
-        "success": 2,
+        "success": 0,
         "failure": 2
+      },
+      "move": {
+        "success": 3,
+        "failure": 0
       },
       "gather": {
         "success": 1,

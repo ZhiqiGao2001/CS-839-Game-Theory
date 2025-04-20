@@ -35,7 +35,7 @@ ACTION_TEMPLATE = {
         "QUANTITY": 1,  # Provide an integer value representing the resource quantity; use -1 if not applicable.
     }
 }
-ACTION_REQUIRMENT = '''
+ACTION_REQUIREMENT = '''
 For action, Select one of: "MOVE", "COLLECT", "EXPLORE", "SEND". If the message is unclear (e.g. move without a given coordinate) or specifies an impossible action (e.g., a negative resource quantity), use "REPEAT".
 For coordinate, Provide a coordinate tuple in the form "(x, y)", for area, only provide the number.
 For quantity of resource required for the task, Provide an integer value representing the resource quantity; use -1 if not applicable.
@@ -46,7 +46,7 @@ For irrelevant field, leave it blank as '', do not write anything
 default_system_message = f'''
 Welcome to the cooperative game! You'll receive messages from your teammate and must decide your next action. 
 Your response must strictly adhere to the following action template:
-ACTION_TEMPLATE = {ACTION_TEMPLATE}, with requirement: {ACTION_REQUIRMENT}
+ACTION_TEMPLATE = {ACTION_TEMPLATE}, with requirement: {ACTION_REQUIREMENT}
 Ensure that every response you generate conforms exactly to this template.
 '''
 
@@ -54,7 +54,7 @@ protocol_system_message = f'''
 Welcome to the cooperative game! You'll receive messages from your teammate and must decide your next action. 
 All incoming messages will follow the protocol format: {PROTOCOL_COMMUNICATION}
 Your response must strictly adhere to the following action template:
-ACTION_TEMPLATE = {ACTION_TEMPLATE}, with requirement: {ACTION_REQUIRMENT}
+ACTION_TEMPLATE = {ACTION_TEMPLATE}, with requirement: {ACTION_REQUIREMENT}
 Ensure that every response you generate conforms exactly to this template.
 '''
 

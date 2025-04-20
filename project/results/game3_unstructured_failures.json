@@ -1,0 +1,58 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Make random sword",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "sword",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  }
+]

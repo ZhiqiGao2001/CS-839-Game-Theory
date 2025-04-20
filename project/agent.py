@@ -1,23 +1,18 @@
 import json
 import time
-from openai import OpenAI
 import ast
+from openai import OpenAI
 from tqdm import tqdm
 import os
 
 import game_1
 import game_2
+import game_3
+import re
 
-
-def dict_matches_string(s, d):
-    """
-    Given a string `s` containing a dictionary (either as a standalone literal
-    like "{...}", with an assignment, e.g., "VAR = { ... }", or wrapped in code blocks
-    such as triple backticks), and a dictionary `d`, return True if every key-value pair in `d`
-    matches the corresponding entries in the parsed dictionary from `s`, otherwise return False.
-    """
+def parsing_dict(string):
     try:
-        s = s.strip()
+        s = string.strip()
 
         # Remove code block markers if present (e.g., ```json ... ```).
         if s.startswith("```"):
@@ -43,74 +38,92 @@ def dict_matches_string(s, d):
         try:
             # Try to parse using ast.literal_eval first.
             parsed_dict = ast.literal_eval(dict_str)
+            return parsed_dict
+
         except Exception:
             # If that fails, try using json.loads.
             parsed_dict = json.loads(dict_str)
+            return parsed_dict
     except Exception as e:
         # If there's an error in parsing, return False.
         return False
+    return parsed_dict
+
+
+def dict_matches_string(s, d):
+    """
+    Given a string `s` containing a dictionary (either as a standalone literal
+    like "{...}", with an assignment, e.g., "VAR = { ... }", or wrapped in code blocks
+    such as triple backticks), and a dictionary `d`, return True if every key-value pair in `d`
+    matches the corresponding entries in the parsed dictionary from `s`, otherwise return False.
+    """
+    parsed_dict = parsing_dict(s)
 
     def is_subset(small, big):
         """
-        Recursively check if every key-value pair in `small` is present in `big`.
-        For nested dictionaries, the check is performed recursively.
+        Recursively check if every key-value pair in `small` is present in `big`,
+        comparing both keys and string values case‑insensitively.
         """
+        # Dict vs Dict
         if isinstance(small, dict) and isinstance(big, dict):
+            # Build a lookup of big’s keys in lowercase → original value
+            big_lower = {
+                (k.casefold() if isinstance(k, str) else k): v
+                for k, v in big.items()
+            }
             for k, v in small.items():
-                if k not in big:
+                key_norm = k.casefold() if isinstance(k, str) else k
+                if key_norm not in big_lower:
                     return False
-                if not is_subset(v, big[k]):
+                if not is_subset(v, big_lower[key_norm]):
                     return False
             return True
-        elif isinstance(small, list) and isinstance(big, list):
-            # For lists, require the lists to be equal.
-            return small == big
-        else:
-            return small == big
+
+        # List vs List: require same length and each element subset‑matches
+        if isinstance(small, list) and isinstance(big, list):
+            if len(small) != len(big):
+                return False
+            return all(is_subset(a, b) for a, b in zip(small, big))
+
+        # String vs String: compare case‑insensitive
+        if isinstance(small, str) and isinstance(big, str):
+            return small.casefold() == big.casefold()
+
+        # Fallback to direct equality for other types
+        return small == big
 
     return is_subset(d, parsed_dict)
 
-
 class CooperativeAgent_game_simple:
-    def __init__(self, role, model_name='gpt-4o', config_path='config.json', prompt_=("structured", "unstructured")):
+    def __init__(self, role, model_name='gpt-4o', config_path='config.json', prompt_=(None, None)):
         self.role = role
         self.model_name = model_name
-        # Load API key from configuration file
-        with open(config_path, 'r', encoding="utf-8") as f:
+        with open(config_path, 'r', encoding='utf-8') as f:
             keys = json.load(f)
-            self.openai_api_key = keys.get("openai_api_key", None)
-        self.openai_client = OpenAI(api_key=self.openai_api_key)
-        self.structured_message = prompt_[0]
-        self.unstructured_message = prompt_[1]
+        self.openai_client = OpenAI(api_key=keys.get('openai_api_key'))
+        self.structured_message, self.unstructured_message = prompt_
 
     def making_response(self, incoming_message, structured=False):
-        # Send the message to the OpenAI API and get a response
-        if structured:
-            system_prompt = self.structured_message
-        else:
-            system_prompt = self.unstructured_message
-        prompt_detail = [
+        system_prompt = self.structured_message if structured else self.unstructured_message
+        messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": incoming_message},
         ]
-
-        response_llm = self.openai_client.chat.completions.create(
+        resp = self.openai_client.chat.completions.create(
             model=self.model_name,
-            messages=prompt_detail,
+            messages=messages,
         )
-        content = response_llm.choices[0].message.content
-        return content
+        return resp.choices[0].message.content
 
 
-def run_tests_game_1(testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
+def run_tests_game(template_module, run_func, testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
     results = {}
     failures = []
-    for _ in tqdm(range(N_test), desc=f"Game1 {'Structured' if structured else 'Unstructured'}"):
-        (msg, correct), mtype = game_1.random_message(structured=structured)
+    for _ in tqdm(range(N_test), desc=f"{run_func.__name__} {'Structured' if structured else 'Unstructured'}"):
+        (msg, correct), mtype = template_module.random_message(structured=structured)
         resp = testing_agent.making_response(msg, structured=structured)
         ok = dict_matches_string(resp, correct)
-
-        results.setdefault(mtype, {"success":0,"failure":0})
+        results.setdefault(mtype, {"success": 0, "failure": 0})
         if ok:
             results[mtype]["success"] += 1
         else:
@@ -120,88 +133,68 @@ def run_tests_game_1(testing_agent, N_test=500, structured=True, save_failures=F
                     "message_type": mtype,
                     "incoming": msg,
                     "expected": correct,
-                    "got": resp
+                    "got": parsing_dict(resp)
                 })
-
     if save_failures and fail_file:
-        with open(fail_file, "w", encoding="utf-8") as f:
+        with open(fail_file, 'w', encoding='utf-8') as f:
             json.dump(failures, f, indent=2)
     return results
+
 
 def game_1_run(N_count=100, model_name='gpt-4o', save=False):
     prompt = (game_1.protocol_system_message, game_1.default_system_message)
-    agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
-
-    # Structured
-    struct_results = run_tests_game_1(
-        agent, N_test=N_count, structured=True,
-        save_failures=True,
-        fail_file="results/game1_structured_failures.json"
-    )
-    # Unstructured
-    unstruct_results = run_tests_game_1(
-        agent, N_test=N_count, structured=False,
-        save_failures=True,
-        fail_file="results/game1_unstructured_failures.json"
-    )
-
-    overall = {"structured": struct_results, "unstructured": unstruct_results}
-    print("Game 1 results:", overall)
+    agent = CooperativeAgent_game_simple('game1', model_name, prompt_=prompt)
+    struct = run_tests_game(game_1, game_1_run, agent, N_test=N_count, structured=True,
+                             save_failures=save,
+                             fail_file='results/game1_structured_failures.json')
+    unstruct = run_tests_game(game_1, game_1_run, agent, N_test=N_count, structured=False,
+                               save_failures=save,
+                               fail_file='results/game1_unstructured_failures.json')
+    print('Game 1:', {'structured': struct, 'unstructured': unstruct})
     if save:
-        with open("test_results_game_1.json","w") as f:
-            json.dump({model_name: overall}, f, indent=2)
+        with open('test_results_game_1.json','w') as f:
+            json.dump({'game1': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
 
-def run_tests_game_2(testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
-    results = {}
-    failures = []
-    for _ in tqdm(range(N_test), desc=f"Game2 {'Structured' if structured else 'Unstructured'}"):
-        (msg, correct), mtype = game_2.random_message(structured=structured)
-        resp = testing_agent.making_response(msg, structured=structured)
-        ok = dict_matches_string(resp, correct)
-
-        results.setdefault(mtype, {"success":0,"failure":0})
-        if ok:
-            results[mtype]["success"] += 1
-        else:
-            results[mtype]["failure"] += 1
-            if save_failures:
-                failures.append({
-                    "message_type": mtype,
-                    "incoming": msg,
-                    "expected": correct,
-                    "got": resp
-                })
-
-    if save_failures and fail_file:
-        with open(fail_file, "w", encoding="utf-8") as f:
-            json.dump(failures, f, indent=2)
-    return results
 
 def game_2_run(N_count=100, model_name='gpt-4o', save=False):
     prompt = (game_2.protocol_system_message, game_2.default_system_message)
-    agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
-
-    # Unstructured
-    unstruct_results = run_tests_game_2(
-        agent, N_test=N_count, structured=False,
-        save_failures=True,
-        fail_file="results/game2_unstructured_failures.json"
-    )
-    # Structured
-    struct_results = run_tests_game_2(
-        agent, N_test=N_count, structured=True,
-        save_failures=True,
-        fail_file="results/game2_structured_failures.json"
-    )
-
-    overall = {"structured": struct_results, "unstructured": unstruct_results}
-    print("Game 2 results:", overall)
+    agent = CooperativeAgent_game_simple('game2', model_name, prompt_=prompt)
+    # Unstructured then structured
+    unstruct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=False,
+                               save_failures=save,
+                               fail_file='results/game2_unstructured_failures.json')
+    struct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=True,
+                             save_failures=save,
+                             fail_file='results/game2_structured_failures.json')
+    print('Game 2:', {'structured': struct, 'unstructured': unstruct})
     if save:
-        with open("test_results_game_2.json","w") as f:
-            json.dump({model_name: overall}, f, indent=2)
+        with open('test_results_game_2.json','w') as f:
+            json.dump({'game2': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
 
 
-if __name__ == "__main__":
-    # Run and save both summary + detailed failures
-    game_1_run(N_count=10, model_name='gpt-4o', save=True)
-    # game_2_run(N_count=100, model_name='gpt-4o', save=True)
+def run_tests_game_3(testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
+    return run_tests_game(game_3, run_tests_game_3, testing_agent,
+                          N_test=N_test, structured=structured,
+                          save_failures=save_failures, fail_file=fail_file)
+
+
+def game_3_run(N_count=100, model_name='gpt-4o', save=False):
+    prompt = (game_3.protocol_system_message, game_3.default_system_message)
+    agent = CooperativeAgent_game_simple('game3', model_name, prompt_=prompt)
+    # Test both modes
+    struct = run_tests_game(game_3, game_3_run, agent, N_test=N_count, structured=True,
+                             save_failures=save,
+                             fail_file='results/game3_structured_failures.json')
+    unstruct = run_tests_game(game_3, game_3_run, agent, N_test=N_count, structured=False,
+                               save_failures=save,
+                               fail_file='results/game3_unstructured_failures.json')
+    print('Game 3:', {'structured': struct, 'unstructured': unstruct})
+    if save:
+        with open('test_results_game_3.json','w') as f:
+            json.dump({'game3': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
+
+
+if __name__ == '__main__':
+    # game_1_run(N_count=10, model_name='gpt-4o', save=True)
+    # game_2_run(N_count=10, model_name='gpt-4o', save=True)
+    game_3_run(N_count=10, model_name='gpt-4o', save=True)
