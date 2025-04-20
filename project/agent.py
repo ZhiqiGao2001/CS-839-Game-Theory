@@ -102,134 +102,106 @@ class CooperativeAgent_game_simple:
         return content
 
 
-def run_tests_game_1(testing_agent, N_test=500, structured=True):
-    """
-    Run tests for a given number of messages and a mode (structured or unstructured).
-    Returns a dictionary with the success and failure counts for each message type.
-    """
-    results = {}  # Dictionary keyed by message_type with {"success": count, "failure": count}
-    for i in tqdm(range(N_test), desc="Testing", unit="message"):
-        # Generate a random message using the provided mode (structured or unstructured)
-        (message_content, correct_response), message_type = game_1.random_message(structured=structured)
-        # Get the agent's response according to the mode
-        llm_response = testing_agent.making_response(message_content, structured=structured)
-        # Initialize the result entry for this message type if needed
-        if message_type not in results:
-            results[message_type] = {"success": 0, "failure": 0}
-        # Check if the agent's response matches the correct response
-        if dict_matches_string(llm_response, correct_response):
-            results[message_type]["success"] += 1
-        else:
-            results[message_type]["failure"] += 1
-    return results
+def run_tests_game_1(testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
+    results = {}
+    failures = []
+    for _ in tqdm(range(N_test), desc=f"Game1 {'Structured' if structured else 'Unstructured'}"):
+        (msg, correct), mtype = game_1.random_message(structured=structured)
+        resp = testing_agent.making_response(msg, structured=structured)
+        ok = dict_matches_string(resp, correct)
 
+        results.setdefault(mtype, {"success":0,"failure":0})
+        if ok:
+            results[mtype]["success"] += 1
+        else:
+            results[mtype]["failure"] += 1
+            if save_failures:
+                failures.append({
+                    "message_type": mtype,
+                    "incoming": msg,
+                    "expected": correct,
+                    "got": resp
+                })
+
+    if save_failures and fail_file:
+        with open(fail_file, "w", encoding="utf-8") as f:
+            json.dump(failures, f, indent=2)
+    return results
 
 def game_1_run(N_count=100, model_name='gpt-4o', save=False):
     prompt = (game_1.protocol_system_message, game_1.default_system_message)
-    testing_agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
+    agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
 
-    # content, correct_response = game_1.gather_message(structured=False)
-    # print("Incoming message:", content)
-    # print("Correct response:", correct_response)
-    # # Get the agent's response
-    # llm_response = testing_agent.making_response(content, structured=False)
-    # print("LLM response:", llm_response)
-    # # Check if the agent's response matches the correct response
-    # if dict_matches_string(llm_response, correct_response):
-    #     print("Success!")
-    # else:
-    #     print("Failure!")
-    #
-    # exit()
-    # Run tests for both structured and unstructured messages.
-    structured_results = run_tests_game_1(testing_agent, N_test=N_count, structured=True)
-    unstructured_results = run_tests_game_1(testing_agent, N_test=N_count, structured=False)
+    # Structured
+    struct_results = run_tests_game_1(
+        agent, N_test=N_count, structured=True,
+        save_failures=True,
+        fail_file="results/game1_structured_failures.json"
+    )
+    # Unstructured
+    unstruct_results = run_tests_game_1(
+        agent, N_test=N_count, structured=False,
+        save_failures=True,
+        fail_file="results/game1_unstructured_failures.json"
+    )
 
-    # Combine the results into one dictionary for comparison.
-    overall_results = {
-        "structured": structured_results,
-        "unstructured": unstructured_results
-    }
-
-    # Print out the results
-    print("Test results (success/failure counts by message type):")
-    print(overall_results)
-    # save the result to a json file
-    # First, open the file in read mode to load the data.
+    overall = {"structured": struct_results, "unstructured": unstruct_results}
+    print("Game 1 results:", overall)
     if save:
-        target_path = "test_results_game_1.json"
-        # Check if the file exists and create it if not.
-        save_result(target_path, model_name, overall_results)
+        with open("test_results_game_1.json","w") as f:
+            json.dump({model_name: overall}, f, indent=2)
 
+def run_tests_game_2(testing_agent, N_test=500, structured=True, save_failures=False, fail_file=None):
+    results = {}
+    failures = []
+    for _ in tqdm(range(N_test), desc=f"Game2 {'Structured' if structured else 'Unstructured'}"):
+        (msg, correct), mtype = game_2.random_message(structured=structured)
+        resp = testing_agent.making_response(msg, structured=structured)
+        ok = dict_matches_string(resp, correct)
 
-def save_result(target_path, model_name, overall_results):
-    if not os.path.exists(target_path):
-        with open(target_path, "w") as f:
-            json.dump({}, f, indent=4)
-    with open(target_path, "r") as f:
-        data = json.load(f)
-
-        # Update the data.
-    data[model_name] = overall_results
-
-    # Then, open the file in write mode to save the updated data.
-    with open(target_path, "w") as f:
-        json.dump(data, f, indent=4)
-
-
-def run_tests_game_2(testing_agent, N_test=500, structured=True):
-    """
-    Run tests for game_2 for a given number of messages and mode (structured or unstructured).
-    Returns a dictionary with the success and failure counts for each message type.
-    """
-    results = {}  # Dictionary keyed by message_type with {"success": count, "failure": count}
-    for i in tqdm(range(N_test), desc="Testing Game 2", unit="message"):
-        # Generate a random message using the provided mode (structured or unstructured)
-        (message_content, correct_response), message_type = game_2.random_message(structured=structured)
-        # Get the agent's response according to the mode
-        llm_response = testing_agent.making_response(message_content, structured=structured)
-        # Initialize the result entry for this message type if needed
-        if message_type not in results:
-            results[message_type] = {"success": 0, "failure": 0}
-        # Check if the agent's response matches the correct response
-        if dict_matches_string(llm_response, correct_response):
-            results[message_type]["success"] += 1
+        results.setdefault(mtype, {"success":0,"failure":0})
+        if ok:
+            results[mtype]["success"] += 1
         else:
-            results[message_type]["failure"] += 1
-            # print("LLM response:", llm_response)
-            # print("Correct Ver:", correct_response)
+            results[mtype]["failure"] += 1
+            if save_failures:
+                failures.append({
+                    "message_type": mtype,
+                    "incoming": msg,
+                    "expected": correct,
+                    "got": resp
+                })
+
+    if save_failures and fail_file:
+        with open(fail_file, "w", encoding="utf-8") as f:
+            json.dump(failures, f, indent=2)
     return results
 
-
 def game_2_run(N_count=100, model_name='gpt-4o', save=False):
-    """
-    Run the full testing suite for game_2 using both structured and unstructured messages.
-    """
-    # Initialize the testing agent for game_2
     prompt = (game_2.protocol_system_message, game_2.default_system_message)
-    testing_agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
+    agent = CooperativeAgent_game_simple("role", model_name=model_name, prompt_=prompt)
 
-    # Run tests for both structured and unstructured messages.
-    unstructured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=False)
-    structured_results = run_tests_game_2(testing_agent, N_test=N_count, structured=True)
+    # Unstructured
+    unstruct_results = run_tests_game_2(
+        agent, N_test=N_count, structured=False,
+        save_failures=True,
+        fail_file="results/game2_unstructured_failures.json"
+    )
+    # Structured
+    struct_results = run_tests_game_2(
+        agent, N_test=N_count, structured=True,
+        save_failures=True,
+        fail_file="results/game2_structured_failures.json"
+    )
 
-    # Combine the results into one dictionary for comparison.
-    overall_results = {
-        "structured": structured_results,
-        "unstructured": unstructured_results
-    }
-
-    # Print out the results.
-    print("Test results (success/failure counts by message type) for Game 2:")
-    print(overall_results)
-
-    # Save the result to a json file if required.
+    overall = {"structured": struct_results, "unstructured": unstruct_results}
+    print("Game 2 results:", overall)
     if save:
-        target_path = "test_results_game_2.json"
-        save_result(target_path, model_name, overall_results)
+        with open("test_results_game_2.json","w") as f:
+            json.dump({model_name: overall}, f, indent=2)
 
 
 if __name__ == "__main__":
-    # Create an instance of the testing agent.
-    # game_1_run(N_count=10, model_name='gpt-4o-mini', save=True)
-    game_2_run(N_count=100, model_name='gpt-4o', save=True)
+    # Run and save both summary + detailed failures
+    game_1_run(N_count=10, model_name='gpt-4o', save=True)
+    # game_2_run(N_count=100, model_name='gpt-4o', save=True)

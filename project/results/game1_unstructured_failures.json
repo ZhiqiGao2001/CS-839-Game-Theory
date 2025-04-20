@@ -1,0 +1,82 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": "ACTION_TEMPLATE = {'ACTION': 'EXPLORE', 'LOCATION': {'COORDINATE': '', 'AREA': ''}, 'RESOURCE': {'TYPE': '', 'QUANTITY': -1}}"
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 1 STONE at (1, 6).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 1
+      }
+    },
+    "got": "ACTION_TEMPLATE = {'ACTION': 'COLLECT', 'LOCATION': {'COORDINATE': '(1, 6)', 'AREA': ''}, 'RESOURCE': {'TYPE': 'STONE', 'QUANTITY': 1}}"
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 4 WOOD at (3, 5).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(3, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 4
+      }
+    },
+    "got": "ACTION_TEMPLATE = {'ACTION': 'COLLECT', 'LOCATION': {'COORDINATE': '(3, 5)', 'AREA': ''}, 'RESOURCE': {'TYPE': 'WOOD', 'QUANTITY': 4}}"
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": "```json\n{\n  \"ACTION\": \"EXPLORE\",\n  \"LOCATION\": {\n    \"COORDINATE\": \"\",\n    \"AREA\": \"forest\"\n  },\n  \"RESOURCE\": {\n    \"TYPE\": \"\",\n    \"QUANTITY\": -1\n  }\n}\n```"
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": "ACTION_TEMPLATE = {'ACTION': 'COLLECT', 'LOCATION': {'COORDINATE': '', 'AREA': ''}, 'RESOURCE': {'TYPE': '', 'QUANTITY': -1}}"
+  }
+]
