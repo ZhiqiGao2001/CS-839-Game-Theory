@@ -44,7 +44,7 @@ Your response must follow this exact structure:
 
 - "ACTION": 
   • Choose one of the following: "SCAN", "LAND", "SAMPLE", "COMM". 
-  • If the message is unclear (e.g., missing essential information like coordinates) or specifies an impossible action (e.g., a negative quantity), respond with "REPEAT".
+  • If the message is unclear (e.g., missing essential information like coordinates) or specifies an impossible action (e.g., a negative quantity), respond with "REPEAT", and put all other fields as default.
 
 - "TARGET": 
   • "COORDINATE": Provide a coordinate tuple in the form "(x, y)" that indicates the target location. If not applicable, leave it as an empty string ''.

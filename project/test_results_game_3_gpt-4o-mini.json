@@ -1,0 +1,48 @@
+{
+  "game3": {
+    "structured": {
+      "craft": {
+        "success": 42,
+        "failure": 5
+      },
+      "mine": {
+        "success": 38,
+        "failure": 7
+      },
+      "build": {
+        "success": 38,
+        "failure": 0
+      },
+      "explore": {
+        "success": 31,
+        "failure": 0
+      },
+      "bad": {
+        "success": 39,
+        "failure": 0
+      }
+    },
+    "unstructured": {
+      "bad": {
+        "success": 35,
+        "failure": 5
+      },
+      "mine": {
+        "success": 12,
+        "failure": 30
+      },
+      "build": {
+        "success": 39,
+        "failure": 1
+      },
+      "explore": {
+        "success": 43,
+        "failure": 0
+      },
+      "craft": {
+        "success": 25,
+        "failure": 10
+      }
+    }
+  }
+}

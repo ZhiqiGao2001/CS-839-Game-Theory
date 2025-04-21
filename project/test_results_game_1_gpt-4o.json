@@ -1,0 +1,48 @@
+{
+  "game1": {
+    "structured": {
+      "explore": {
+        "success": 39,
+        "failure": 1
+      },
+      "bad": {
+        "success": 5,
+        "failure": 39
+      },
+      "move": {
+        "success": 22,
+        "failure": 10
+      },
+      "gather": {
+        "success": 48,
+        "failure": 0
+      },
+      "send": {
+        "success": 36,
+        "failure": 0
+      }
+    },
+    "unstructured": {
+      "gather": {
+        "success": 28,
+        "failure": 4
+      },
+      "move": {
+        "success": 34,
+        "failure": 6
+      },
+      "explore": {
+        "success": 41,
+        "failure": 1
+      },
+      "bad": {
+        "success": 4,
+        "failure": 41
+      },
+      "send": {
+        "success": 16,
+        "failure": 25
+      }
+    }
+  }
+}

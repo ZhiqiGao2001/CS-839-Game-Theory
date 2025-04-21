@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 import matplotlib.pyplot as plt
+import os
 
 
 def analyze_failures(failure_file):
@@ -13,7 +14,7 @@ def analyze_failures(failure_file):
 
     if not failures:
         print(f"No failures found in {failure_file}")
-        return
+        return None
 
     # Create a DataFrame for easier analysis
     df = pd.DataFrame(failures)
@@ -166,6 +167,10 @@ def analyze_failures(failure_file):
             print(f"Error parsing response: {e}")
             continue
 
+    confusion_matrix = None
+    percentage_matrix = None
+    repeat_error_stats = None
+
     # Analyze action mismatches
     if action_mismatches:
         am_df = pd.DataFrame(action_mismatches)
@@ -261,17 +266,20 @@ def analyze_failures(failure_file):
     }
 
 
-def generate_visualizations(stats, prefix):
+def generate_visualizations(stats, output_dir):
     """Generate visualizations from the failure statistics."""
     if not stats:
         return
+
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
 
     # Failure type pie chart
     failure_counts = stats['failure_stats']['Count']
     plt.figure(figsize=(10, 6))
     plt.pie(failure_counts, labels=failure_counts.index, autopct='%1.1f%%')
     plt.title('Failures by Message Type')
-    plt.savefig(f'results/{prefix}failure_types_pie.png')
+    plt.savefig(os.path.join(output_dir, 'failure_types_pie.png'))
     plt.close()
 
     # Response format bar chart
@@ -281,7 +289,7 @@ def generate_visualizations(stats, prefix):
     plt.title('Failures by Response Format')
     plt.xlabel('Format Type')
     plt.ylabel('Count')
-    plt.savefig(f'results/{prefix}format_failures_bar.png')
+    plt.savefig(os.path.join(output_dir, 'format_failures_bar.png'))
     plt.close()
 
     # Confusion matrix heatmap
@@ -303,7 +311,7 @@ def generate_visualizations(stats, prefix):
                          ha="center", va="center", color="white" if conf_matrix.iloc[i, j] > 3 else "black")
 
         plt.tight_layout()
-        plt.savefig(f'results/{prefix}confusion_matrix.png')
+        plt.savefig(os.path.join(output_dir, 'confusion_matrix.png'))
         plt.close()
 
     # Field mismatch visualization
@@ -318,49 +326,83 @@ def generate_visualizations(stats, prefix):
         plt.ylabel('Count')
         plt.xticks(rotation=45)
         plt.tight_layout()
-        plt.savefig(f'results/{prefix}field_mismatches.png')
+        plt.savefig(os.path.join(output_dir, 'field_mismatches.png'))
         plt.close()
 
 
-if __name__ == "__main__":
-    # game_1_structured, game_1_unstructured = "results/game1_structured_failures.json", "results/game1_unstructured_failures.json"
-    # game_1_prefix_structured = "game1_structured_"
-    # game_1_prefix_unstructured = "game1_unstructured_"
-    # print("Analyzing unstructured failures...")
-    # unstruct_stats = analyze_failures(game_1_unstructured)
-    #
-    # print("\nAnalyzing structured failures...")
-    # struct_stats = analyze_failures(game_1_structured)
-    #
-    # # Generate visualizations
-    # if unstruct_stats and unstruct_stats['total_failures'] > 0:
-    #     print("\nGenerating visualizations for unstructured failures...")
-    #     generate_visualizations(unstruct_stats, game_1_prefix_unstructured)
-    #     generate_visualizations(struct_stats, game_1_prefix_structured)
-    #
-    # game_2_structured, game_2_unstructured = "results/game2_structured_failures.json", "results/game2_unstructured_failures.json"
-    # game_2_prefix_structured = "game2_structured_"
-    # game_2_prefix_unstructured = "game2_unstructured_"
-    # print("Analyzing unstructured failures...")
-    # unstruct_stats = analyze_failures(game_2_unstructured)
-    # print("\nAnalyzing structured failures...")
-    # struct_stats = analyze_failures(game_2_structured)
-    # # Generate visualizations
-    # if unstruct_stats and unstruct_stats['total_failures'] > 0:
-    #     print("\nGenerating visualizations for unstructured failures...")
-    #     generate_visualizations(unstruct_stats, game_2_prefix_unstructured)
-    #     generate_visualizations(struct_stats, game_2_prefix_structured)
-    # print("Analysis and visualizations complete.")
+def process_game_failures(game_name, model_name=None):
+    """Process failure analysis for a specific game and model."""
+    # Create base directory for this game
+    results_dir = f"results/{game_name}"
+    os.makedirs(results_dir, exist_ok=True)
 
-    game_3_structured, game_3_unstructured = "results/game3_structured_failures.json", "results/game3_unstructured_failures.json"
-    game_3_prefix_structured = "game3_structured_"
-    game_3_prefix_unstructured = "game3_unstructured_"
-    print("Analyzing unstructured failures...")
-    unstruct_stats = analyze_failures(game_3_unstructured)
-    print("\nAnalyzing structured failures...")
-    struct_stats = analyze_failures(game_3_structured)
-    # Generate visualizations
-    if unstruct_stats and unstruct_stats['total_failures'] > 0:
-        print("\nGenerating visualizations for unstructured failures...")
-        generate_visualizations(unstruct_stats, game_3_prefix_unstructured)
-        generate_visualizations(struct_stats, game_3_prefix_structured)
+    # Define file paths with model name if provided
+    model_suffix = f"_{model_name}" if model_name else ""
+    structured_file = f"results/{game_name}_structured_failures{model_suffix}.json"
+    unstructured_file = f"results/{game_name}_unstructured_failures{model_suffix}.json"
+
+    # Create output directories
+    struct_output_dir = os.path.join(results_dir, f"structured{model_suffix}")
+    unstruct_output_dir = os.path.join(results_dir, f"unstructured{model_suffix}")
+
+    # Process unstructured failures
+    print(f"\nAnalyzing {game_name} unstructured failures{model_suffix}...")
+    if os.path.exists(unstructured_file):
+        unstruct_stats = analyze_failures(unstructured_file)
+        if unstruct_stats and unstruct_stats['total_failures'] > 0:
+            print(f"\nGenerating visualizations for {game_name} unstructured failures{model_suffix}...")
+            generate_visualizations(unstruct_stats, unstruct_output_dir)
+    else:
+        print(f"File not found: {unstructured_file}")
+
+    # Process structured failures
+    print(f"\nAnalyzing {game_name} structured failures{model_suffix}...")
+    if os.path.exists(structured_file):
+        struct_stats = analyze_failures(structured_file)
+        if struct_stats and struct_stats['total_failures'] > 0:
+            print(f"\nGenerating visualizations for {game_name} structured failures{model_suffix}...")
+            generate_visualizations(struct_stats, struct_output_dir)
+    else:
+        print(f"File not found: {structured_file}")
+
+
+def find_failure_files():
+    """Find all failure JSON files in the results directory."""
+    game_model_pairs = []
+    if os.path.exists("results"):
+        for filename in os.listdir("results"):
+            if filename.endswith("_failures.json") or "_failures_" in filename:
+                # Extract game name and model name
+                parts = filename.replace("_failures", "").replace(".json", "").split("_")
+                if "structured" in parts or "unstructured" in parts:
+                    # Format is game_[un]structured_failures_model.json or game_[un]structured_failures.json
+                    game_name = parts[0]
+                    model_name = parts[-1] if len(parts) > 2 else None
+                    pair = (game_name, model_name)
+                    if pair not in game_model_pairs:
+                        game_model_pairs.append(pair)
+    return game_model_pairs
+
+
+if __name__ == "__main__":
+    # Create main results directory if it doesn't exist
+    os.makedirs("results", exist_ok=True)
+
+    # Find all game/model combinations in the results directory
+    game_model_pairs = find_failure_files()
+
+    if game_model_pairs:
+        print(f"Found {len(game_model_pairs)} game/model combinations to analyze")
+        for game_name, model_name in game_model_pairs:
+            process_game_failures(game_name, model_name)
+    else:
+        # Fallback to processing specific games
+        print("No failure files found automatically. Processing default games...")
+        games = ["game1", "game2", "game3"]
+        models = ["gpt-4o", "gpt-4o-mini"]
+
+        for game in games:
+            for model in models:
+                process_game_failures(game, model)
+
+    print("Analysis and visualizations complete.")

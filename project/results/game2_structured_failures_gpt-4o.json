@@ -1,0 +1,1038 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "Communication missing status at (28, 74).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(28, 74)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Maybe sample something near (45, 77)?",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "SAMPLE",
+      "TARGET": {
+        "COORDINATE": "(45, 77)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Maybe sample something near (63, 36)?",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "SAMPLE",
+      "TARGET": {
+        "COORDINATE": "(63, 36)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send a communication from (22, 80).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(22, 80)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay NEED_SUPPORT from our position at (37, 33).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(37, 33)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Land on (98, 30)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "LAND",
+      "TARGET": {
+        "COORDINATE": "(98, 30)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": "ROCKY"
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Send update: NEED_SUPPORT at base coordinates (21, 74).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(21, 74)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Notify mission control: CRITICAL at (24, 78).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(24, 78)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Maybe sample something near (59, 74)?",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "SAMPLE",
+      "TARGET": {
+        "COORDINATE": "(59, 74)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay CRITICAL from our position at (49, 9).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(49, 9)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Land on (23, 22)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "LAND",
+      "TARGET": {
+        "COORDINATE": "(23, 22)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": "ROCKY"
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Notify mission control: CRITICAL at (9, 90).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(9, 90)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Send update: SUCCESS at base coordinates (94, 38).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(94, 38)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Land on (58, 36)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "LAND",
+      "TARGET": {
+        "COORDINATE": "(58, 36)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: NEED_SUPPORT from (28, 86).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(28, 86)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send a communication from (10, 31).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(10, 31)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Message HQ that we're at (44, 17) with a status of NEED_SUPPORT.",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(44, 17)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: NEED_SUPPORT from (81, 63).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(81, 63)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Notify mission control: NEED_SUPPORT at (48, 37).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(48, 37)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "sample",
+    "incoming": "Check (27, 22) for GAS samples, probably 39 of them.",
+    "expected": {
+      "ACTION": "SAMPLE",
+      "TARGET": {
+        "COORDINATE": "(27, 22)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "GAS",
+        "VALUE": 39
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Notify mission control: SUCCESS at (61, 75).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(61, 75)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Send update: NEED_SUPPORT at base coordinates (98, 9).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(98, 9)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Communication missing status at (90, 83).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(90, 83)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay SUCCESS from our position at (5, 0).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(5, 0)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send a communication from (87, 32).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(87, 32)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay SUCCESS from our position at (98, 27).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(98, 27)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: NEED_SUPPORT from (8, 34).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(8, 34)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Communication missing status at (80, 97).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(80, 97)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay CRITICAL from our position at (76, 23).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(76, 23)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: SUCCESS from (45, 9).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(45, 9)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Communication to mission control: SUCCESS, located at (99, 81).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(99, 81)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Communication to mission control: NEED_SUPPORT, located at (50, 19).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(50, 19)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Land on (1, 48)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "LAND",
+      "TARGET": {
+        "COORDINATE": "(1, 48)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: SUCCESS from (75, 50).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(75, 50)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Land on (40, 6)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "LAND",
+      "TARGET": {
+        "COORDINATE": "(40, 6)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Status report: NEED_SUPPORT from (26, 77).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(26, 77)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "comm",
+    "incoming": "Relay SUCCESS from our position at (44, 14).",
+    "expected": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(44, 14)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|8|(46, 78)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(46, 78)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|-10|(5, 72)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(5, 72)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|7|(36, 69)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(36, 69)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "LAND:UNKNOWN|(71, 4)ASDHDKJK",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(71, 4)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "COMM: |(0, 27)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(0, 27)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|10|(4, 91)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(4, 91)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "LAND:UNKNOWN|(87, 5)ASDHDKJK",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(87, 5)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|-1|(6, 41)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(6, 41)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "LAND:UNKNOWN|(84, 21)ASDHDKJK",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(84, 21)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|0|(33, 42)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(33, 42)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "COMM: |(100, 36)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "COMM",
+      "TARGET": {
+        "COORDINATE": "(100, 36)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|5|(66, 35)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(66, 35)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  }
+]

@@ -1,0 +1,1287 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 10 DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 10
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 43 IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 43
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 35 GOLD from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "GOLD",
+        "QUANTITY": 35
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 11 COAL from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": 11
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 16 WOOD from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 16
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 9 PICKAXE.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "PICKAXE",
+        "QUANTITY": 9
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 42 units of IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 42
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 22 DIAMOND from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 22
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 10 units of DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 10
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 59 DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 59
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 61 WOOD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 61
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 7 WOOD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 7
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 32 units of COAL.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": 32
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 13 DIAMOND from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 13
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 47 units of DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 47
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 47 GOLD from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "GOLD",
+        "QUANTITY": 47
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 16 units of IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 16
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 8 CHEST.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "CHEST",
+        "QUANTITY": 8
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 21 COAL.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": 21
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 8 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 8
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 40 units of DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 40
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "build",
+    "incoming": "Construct HOUSE on (35, 85).",
+    "expected": {
+      "ACTION": "BLD",
+      "LOCATION": {
+        "COORDINATE": "(35, 85)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": "HOUSE"
+    },
+    "got": {
+      "ACTION": "BLD",
+      "LOCATION": {
+        "COORDINATE": "(35, 85)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": "HOUSE"
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 7 AXE.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "AXE",
+        "QUANTITY": 7
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 33 DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 33
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 27 COAL.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": 27
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 63 IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 63
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 30 DIAMOND from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 30
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 4 PICKAXE.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "PICKAXE",
+        "QUANTITY": 4
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 37 GOLD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "GOLD",
+        "QUANTITY": 37
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 34 units of WOOD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 34
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "Please make 6 PICKAXE.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "PICKAXE",
+        "QUANTITY": 6
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {},
+      "RESOURCE": {
+        "TYPE": "PICKAXE",
+        "QUANTITY": 6
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 25 units of COAL.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "COAL",
+        "QUANTITY": 25
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 3 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 3
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 33 IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 33
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 2 FURNACE.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FURNACE",
+        "QUANTITY": 2
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 2 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 2
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 50 DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 50
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 9 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 9
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Get 24 WOOD from the veins.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 24
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 62 units of IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 62
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 38 WOOD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 38
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  }
+]

@@ -1,14 +1,12 @@
 import json
-import time
 import ast
 from openai import OpenAI
 from tqdm import tqdm
-import os
 
 import game_1
 import game_2
-import game_3
-import re
+from project import game_3
+
 
 def parsing_dict(string):
     try:
@@ -146,13 +144,13 @@ def game_1_run(N_count=100, model_name='gpt-4o', save=False):
     agent = CooperativeAgent_game_simple('game1', model_name, prompt_=prompt)
     struct = run_tests_game(game_1, game_1_run, agent, N_test=N_count, structured=True,
                              save_failures=save,
-                             fail_file='results/game1_structured_failures.json')
+                             fail_file=f'results/game1_structured_failures_{model_name}.json')
     unstruct = run_tests_game(game_1, game_1_run, agent, N_test=N_count, structured=False,
                                save_failures=save,
-                               fail_file='results/game1_unstructured_failures.json')
+                               fail_file=f'results/game1_unstructured_failures_{model_name}.json')
     print('Game 1:', {'structured': struct, 'unstructured': unstruct})
     if save:
-        with open('test_results_game_1.json','w') as f:
+        with open(f'test_results_game_1_{model_name}.json','w') as f:
             json.dump({'game1': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
 
 
@@ -162,13 +160,13 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
     # Unstructured then structured
     unstruct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=False,
                                save_failures=save,
-                               fail_file='results/game2_unstructured_failures.json')
+                               fail_file=f'results/game2_structured_failures_{model_name}.json')
     struct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=True,
                              save_failures=save,
-                             fail_file='results/game2_structured_failures.json')
+                             fail_file=f'results/game2_unstructured_failures_{model_name}.json')
     print('Game 2:', {'structured': struct, 'unstructured': unstruct})
     if save:
-        with open('test_results_game_2.json','w') as f:
+        with open(f'test_results_game_2_{model_name}.json','w') as f:
             json.dump({'game2': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
 
 
@@ -183,18 +181,22 @@ def game_3_run(N_count=100, model_name='gpt-4o', save=False):
     agent = CooperativeAgent_game_simple('game3', model_name, prompt_=prompt)
     # Test both modes
     struct = run_tests_game(game_3, game_3_run, agent, N_test=N_count, structured=True,
-                             save_failures=save,
-                             fail_file='results/game3_structured_failures.json')
+                            save_failures=save,
+                            fail_file=f'results/game3_structured_failures_{model_name}.json')
     unstruct = run_tests_game(game_3, game_3_run, agent, N_test=N_count, structured=False,
-                               save_failures=save,
-                               fail_file='results/game3_unstructured_failures.json')
+                              save_failures=save,
+                              fail_file=f'results/game3_unstructured_failures_{model_name}.json')
     print('Game 3:', {'structured': struct, 'unstructured': unstruct})
     if save:
-        with open('test_results_game_3.json','w') as f:
+        with open(f'test_results_game_3_{model_name}.json','w') as f:
             json.dump({'game3': {'structured': struct, 'unstructured': unstruct}}, f, indent=2)
 
 
 if __name__ == '__main__':
-    # game_1_run(N_count=10, model_name='gpt-4o', save=True)
-    # game_2_run(N_count=10, model_name='gpt-4o', save=True)
-    game_3_run(N_count=10, model_name='gpt-4o', save=True)
+    N_count = 200
+    game_1_run(N_count=N_count, model_name='gpt-4o-mini', save=True)
+    game_2_run(N_count=N_count, model_name='gpt-4o-mini', save=True)
+    game_3_run(N_count=N_count, model_name='gpt-4o-mini', save=True)
+    game_1_run(N_count=N_count, model_name='gpt-4o', save=True)
+    game_2_run(N_count=N_count, model_name='gpt-4o', save=True)
+    game_3_run(N_count=N_count, model_name='gpt-4o', save=True)

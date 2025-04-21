@@ -1,0 +1,758 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "Gather wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "wood",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "(0, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "Unknown",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE | COAL|ten",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Please mine 60 GOLD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "GOLD",
+        "QUANTITY": 60
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Make -1 sword",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "wood",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "build",
+    "incoming": "Build a HOUSE at (12, 94).",
+    "expected": {
+      "ACTION": "BLD",
+      "LOCATION": {
+        "COORDINATE": "(12, 94)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": "HOUSE"
+    },
+    "got": {
+      "ACTION": "BLD",
+      "LOCATION": {
+        "COORDINATE": "(12, 94)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": "HOUSE"
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "Craft 6 FURNACE(s).",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FURNACE",
+        "QUANTITY": 6
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 53 units of WOOD.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 53
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 50 units of DIAMOND.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "DIAMOND",
+        "QUANTITY": 50
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "wood",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "Craft 8 AXE(s).",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "AXE",
+        "QUANTITY": 8
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "AXE",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "mine",
+    "incoming": "Mine 46 units of IRON.",
+    "expected": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "IRON",
+        "QUANTITY": 46
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 10 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 10
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "CRAFT:WOOD",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "(0, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "stone",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "wood",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Make -1 sword",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL:|()",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "EXPL",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "craft",
+    "incoming": "I need 8 SWORD.",
+    "expected": {
+      "ACTION": "CRAFT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "SWORD",
+        "QUANTITY": 8
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MINE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    },
+    "got": {
+      "ACTION": "MINE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      },
+      "STRUCTURE": ""
+    }
+  }
+]

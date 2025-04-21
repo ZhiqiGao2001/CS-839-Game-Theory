@@ -38,10 +38,10 @@ ACTION_TEMPLATE = {
 }
 
 ACTION_REQUIREMENT = '''
-For ACTION, select one of: "MINE", "CRAFT", "BLD", "EXPL", "REPEAT". If the message is unclear or specifies an impossible action (e.g., a negative resource quantity), use "REPEAT".
+For ACTION, select one of: "MINE", "CRAFT", "BLD", "EXPL", "REPEAT". If the message is unclear or specifies an impossible action (e.g., a negative resource quantity), use "REPEAT" and put all other fields as default.
 For COORDINATE, provide a tuple in the form "(x, y)", leaving it blank if not applicable.
 For AREA, specify the biome name when EXPL; leave blank otherwise.
-For RESOURCE.TYPE, indicate resource/item; for RESOURCE.QUANTITY, an integer or -1 if not applicable.
+For RESOURCE.TYPE, indicate resource/item; for RESOURCE.QUANTITY, it is only used for mining/crafting; -1 if not applicable, an integer or -1 if not applicable.
 For STRUCTURE, specify the structure name when BLD; leave blank otherwise.
 '''
 
@@ -152,8 +152,8 @@ def explore_message(structured=True):
 def bad_message(structured=True):
     # Generate malformed or ambiguous commands
     choices = [
-        "MINE", "MINE | COAL|ten", "CRAFT:WOOD", "BLD: house", "EXPL:|()",
-        "Gather wood", "Make random sword", "Go there"
+        "MINE", "MINE | COAL|ten", "CRAFT:WOOD", "EXPL:|()",
+        "Gather wood", "Make -1 sword", "Go there"
     ]
     message = random.choice(choices)
     correct_response = {

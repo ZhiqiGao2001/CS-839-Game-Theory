@@ -36,8 +36,8 @@ ACTION_TEMPLATE = {
     }
 }
 ACTION_REQUIREMENT = '''
-For action, Select one of: "MOVE", "COLLECT", "EXPLORE", "SEND". If the message is unclear (e.g. move without a given coordinate) or specifies an impossible action (e.g., a negative resource quantity), use "REPEAT".
-For coordinate, Provide a coordinate tuple in the form "(x, y)", for area, only provide the number.
+For action, Select one of: "MOVE", "COLLECT", "EXPLORE", "SEND". If the message is unclear (e.g. move without a given coordinate) or specifies an impossible action (e.g., a negative resource quantity), use "REPEAT", and put all other fields as default.
+For coordinate, Provide a coordinate tuple in the form "(x, y)", for area, only provide the number if it is specified clearly. Leave blank if not specified.
 For quantity of resource required for the task, Provide an integer value representing the resource quantity; use -1 if not applicable.
 RESOURCE_TYPE must be one of: WOOD, STONE, FOOD, WEAPON.
 For irrelevant field, leave it blank as '', do not write anything

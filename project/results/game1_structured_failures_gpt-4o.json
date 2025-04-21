@@ -1,0 +1,1302 @@
+[
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: (4, 8)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (5, 2)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(5, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: fish 2",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL forest |||",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": "forest"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (1, 0)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(1, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (1, 3)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(1, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SEND: WOOD | (7, 2)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(7, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL forest |||",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": "forest"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (5, 6)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(5, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR WOOD -7",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SEND: WOOD | 8",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (7, 0)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(7, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR WOOD -2",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (7, 0)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(7, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(8, 5)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (8, 0)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(8, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SEND: WOOD | (4, 1)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (0, 4)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(0, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SEND: WOOD | (7, 3)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: (8, 9)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (3, 7)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(3, 7)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(10, 6)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(10, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(10, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (3, 6)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(3, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE |(1,2,3,4)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (7, 5)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(7, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (2, 8)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(2, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: fish 1",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(7, 6)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(7, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(7, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE |(1,2,3,4)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(0, 2)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(0, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(0, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: fish -3",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(6, 8)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(6, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(6, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(4, 8)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(4, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(4, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(3, 1)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: (1, 1)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (9, 3)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(9, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: fish -9",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE |(1,2,3,4)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (5, 3)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(5, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR: (10, 8)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE |(1,2,3,4)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(4, 3)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(4, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(4, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "GTHR WOOD -4",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SEND: WOOD | (7, 9)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(3, 10)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "explore",
+    "incoming": "EXPL:Area 4|(0, 9)",
+    "expected": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(0, 9)",
+        "AREA": "4"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(0, 9)",
+        "AREA": "Area 4"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "EXPL | (6, 5)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(6, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "MOVE:(5, 6)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(5, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(5, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "MOVE",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  }
+]

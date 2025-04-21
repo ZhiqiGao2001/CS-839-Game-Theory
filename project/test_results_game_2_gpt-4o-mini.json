@@ -1,0 +1,48 @@
+{
+  "game2": {
+    "structured": {
+      "land": {
+        "success": 51,
+        "failure": 0
+      },
+      "comm": {
+        "success": 31,
+        "failure": 0
+      },
+      "sample": {
+        "success": 43,
+        "failure": 0
+      },
+      "bad": {
+        "success": 21,
+        "failure": 12
+      },
+      "scan": {
+        "success": 42,
+        "failure": 0
+      }
+    },
+    "unstructured": {
+      "land": {
+        "success": 39,
+        "failure": 0
+      },
+      "sample": {
+        "success": 37,
+        "failure": 0
+      },
+      "comm": {
+        "success": 47,
+        "failure": 4
+      },
+      "scan": {
+        "success": 35,
+        "failure": 0
+      },
+      "bad": {
+        "success": 18,
+        "failure": 20
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "message_type": "sample",
+    "incoming": "SAMPLE:ROCK|37|(98, 69)",
+    "expected": {
+      "ACTION": "SAMPLE",
+      "TARGET": {
+        "COORDINATE": "(98, 69)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "ROCK",
+        "VALUE": 37
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  }
+]

@@ -41,8 +41,12 @@ def parse_to_table(json_path):
 
 
 if __name__ == "__main__":
-    json_path_1 = "test_results_game_1.json"
+    # Example usage
+    parse_to_table('test_results_game_1_gpt-4o.json')
+    parse_to_table("test_results_game_2_gpt-4o.json")
+    parse_to_table('test_results_game_3_gpt-4o.json')
+    parse_to_table('test_results_game_1_gpt-4o-mini.json')
+    parse_to_table('test_results_game_2_gpt-4o-mini.json')
+    parse_to_table('test_results_game_3_gpt-4o-mini.json')
 
-    json_path_2 = "test_results_game_2.json"
-    parse_to_table(json_path_1)
-    parse_to_table(json_path_2)
+

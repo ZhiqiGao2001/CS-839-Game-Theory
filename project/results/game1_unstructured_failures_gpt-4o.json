@@ -1,0 +1,1998 @@
+[
+  {
+    "message_type": "move",
+    "incoming": "Go to coordinate (6, 5)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(6, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(6, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Move to (1,2,3,4).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Move to (1,2,3,4).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 6 WOOD at (4, 6).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(4, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 6
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(4, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 6
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "Move to (3, 9).",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(3, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather -10 fishSend -10 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather 1 fishSend 1 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 5 WEAPON at (1, 4).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 5
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(1, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 5
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 10 STONE at (1, 5).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(1, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect -2 units of wood.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "Go to coordinate (9, 7)",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(9, 7)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(9, 7)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 8 STONE at (4, 9).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(4, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 8
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(4, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 8
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect -7 units of wood.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather at (10, 10).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(10, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "gather",
+    "incoming": "Collect 47 units of WOOD.",
+    "expected": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 47
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {},
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 47
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 3 WEAPON at (8, 5).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 3
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 3
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "Relocate to (5, 9).",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(5, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(5, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 3 WOOD at (6, 1).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(6, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 3
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(6, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 3
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather 4 fishSend 4 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 4
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 2 STONE at (10, 6).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(10, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(10, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 5 WEAPON at (2, 10).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(2, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 5
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(2, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 5
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather 10 fishSend 10 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 2 WEAPON at (1, 8).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(1, 8)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "Relocate to (2, 4).",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(2, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(2, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather at (1, 6).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(1, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send 1 units of wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Check out this place ",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Check out this place ",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "explore",
+    "incoming": "Explore Area 3 at (7, 2).",
+    "expected": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(7, 2)",
+        "AREA": "3"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "(7, 2)",
+        "AREA": "3"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send 4 units of wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 4
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "gather",
+    "incoming": "Collect 51 units of WEAPON.",
+    "expected": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 51
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 10 STONE at (5, 3).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(5, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(5, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 1 STONE at (0, 9).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(0, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(0, 9)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 10 STONE at (10, 4).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(10, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(10, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 10
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Check out this place ",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 2 STONE at (9, 0).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(9, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(9, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Move to me.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect -10 units of wood.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather -6 fishSend -6 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 3 STONE at (5, 5).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(5, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 3
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(5, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 3
+      }
+    }
+  },
+  {
+    "message_type": "gather",
+    "incoming": "Collect 99 units of WEAPON.",
+    "expected": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 99
+      }
+    },
+    "got": {
+      "ACTION": "",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 99
+      }
+    }
+  },
+  {
+    "message_type": "gather",
+    "incoming": "Get 89 WOOD",
+    "expected": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 89
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {},
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 89
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": "forest"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather at (1, 0).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(1, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": "forest"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 1 WEAPON at (2, 0).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(2, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(2, 0)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Check out this place ",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 2 STONE at (3, 3).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(3, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(3, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather -10 fishSend -10 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 1 STONE at (0, 3).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(0, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(0, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 8 FOOD at (9, 6).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(9, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 8
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(9, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 8
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 2 FOOD at (7, 6).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(7, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(7, 6)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 8 FOOD at (1, 4).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 8
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(1, 4)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 8
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Check out this place ",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 4 WOOD at (1, 3).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(1, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 4
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(1, 3)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 4
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send -8 units of wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "move",
+    "incoming": "Relocate to (1, 1).",
+    "expected": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(1, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(1, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 8 STONE at (3, 1).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(3, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 8
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(3, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 8
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 2 STONE at (8, 2).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(8, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(8, 2)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 2
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I want 7 STONE at (8, 5).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 7
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(8, 5)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "STONE",
+        "QUANTITY": 7
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect -9 units of wood.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Please gather 5 fishSend 5 units of food to me",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "FOOD",
+        "QUANTITY": 5
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Collect -7 units of wood.",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": 1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather resource",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Send 10 units of wood",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WOOD",
+        "QUANTITY": 10
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Gather at (6, 1).",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "MOVE",
+      "LOCATION": {
+        "COORDINATE": "(6, 1)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "Explore the forest",
+    "expected": {
+      "ACTION": "REPEAT",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    },
+    "got": {
+      "ACTION": "EXPLORE",
+      "LOCATION": {
+        "COORDINATE": "",
+        "AREA": "forest"
+      },
+      "RESOURCE": {
+        "TYPE": "",
+        "QUANTITY": -1
+      }
+    }
+  },
+  {
+    "message_type": "send",
+    "incoming": "I need 7 WEAPON at (8, 10).",
+    "expected": {
+      "ACTION": "SEND",
+      "LOCATION": {
+        "COORDINATE": "(8, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 7
+      }
+    },
+    "got": {
+      "ACTION": "COLLECT",
+      "LOCATION": {
+        "COORDINATE": "(8, 10)",
+        "AREA": ""
+      },
+      "RESOURCE": {
+        "TYPE": "WEAPON",
+        "QUANTITY": 7
+      }
+    }
+  }
+]
