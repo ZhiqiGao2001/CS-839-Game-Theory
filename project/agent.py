@@ -160,10 +160,10 @@ def game_2_run(N_count=100, model_name='gpt-4o', save=False):
     # Unstructured then structured
     unstruct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=False,
                                save_failures=save,
-                               fail_file=f'results/game2_structured_failures_{model_name}.json')
+                               fail_file=f'results/game2_unstructured_failures_{model_name}.json')
     struct = run_tests_game(game_2, game_2_run, agent, N_test=N_count, structured=True,
                              save_failures=save,
-                             fail_file=f'results/game2_unstructured_failures_{model_name}.json')
+                             fail_file=f'results/game2_structured_failures_{model_name}.json')
     print('Game 2:', {'structured': struct, 'unstructured': unstruct})
     if save:
         with open(f'test_results_game_2_{model_name}.json','w') as f:

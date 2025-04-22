@@ -37,7 +37,9 @@ def parse_to_table(json_path):
     pd.set_option('display.max_colwidth', None)
     pd.set_option('display.expand_frame_repr', False)
     # Step 4: Display the DataFrame
+    print("Model names:" + json_path)
     print(df)
+    print()
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 [
   {
     "message_type": "bad",
-    "incoming": "Maybe sample something near (0, 8)?",
+    "incoming": "SAMPLE:METAL|8|(46, 78)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -15,21 +15,21 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "SAMPLE",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(0, 8)",
+        "COORDINATE": "(46, 78)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
       },
       "SURFACE_TYPE": ""
     }
   },
   {
     "message_type": "bad",
-    "incoming": "Land on (11, 87)",
+    "incoming": "SAMPLE:METAL|-10|(5, 72)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -43,9 +43,9 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "LAND",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(11, 87)",
+        "COORDINATE": "(5, 72)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -57,7 +57,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Land on (84, 54)",
+    "incoming": "SAMPLE:METAL|7|(36, 69)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -71,37 +71,9 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "LAND",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(84, 54)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "comm",
-    "incoming": "Notify mission control: SUCCESS at (60, 65).",
-    "expected": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(60, 65)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "",
+        "COORDINATE": "(36, 69)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -113,7 +85,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Land on (60, 95)",
+    "incoming": "LAND:UNKNOWN|(71, 4)ASDHDKJK",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -127,9 +99,9 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "LAND",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(60, 95)",
+        "COORDINATE": "(71, 4)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -141,7 +113,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Communication missing status at (11, 69).",
+    "incoming": "COMM: |(0, 27)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -157,7 +129,7 @@
     "got": {
       "ACTION": "COMM",
       "TARGET": {
-        "COORDINATE": "(11, 69)",
+        "COORDINATE": "(0, 27)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -169,7 +141,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Land on (30, 65)",
+    "incoming": "SAMPLE:METAL|10|(4, 91)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -183,9 +155,9 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "LAND",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(30, 65)",
+        "COORDINATE": "(4, 91)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -197,7 +169,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Maybe sample something near (40, 82)?",
+    "incoming": "LAND:UNKNOWN|(87, 5)ASDHDKJK",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -211,21 +183,105 @@
       "SURFACE_TYPE": ""
     },
     "got": {
-      "ACTION": "SAMPLE",
+      "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(40, 82)",
+        "COORDINATE": "(87, 5)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
       },
       "SURFACE_TYPE": ""
     }
   },
   {
     "message_type": "bad",
-    "incoming": "Send a communication from (5, 22).",
+    "incoming": "SAMPLE:METAL|-1|(6, 41)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(6, 41)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "LAND:UNKNOWN|(84, 21)ASDHDKJK",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(84, 21)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "SAMPLE:METAL|0|(33, 42)",
+    "expected": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    },
+    "got": {
+      "ACTION": "REPEAT",
+      "TARGET": {
+        "COORDINATE": "(33, 42)",
+        "OBJECT": ""
+      },
+      "MATERIAL_DETAIL": {
+        "MATERIAL_TYPE": "",
+        "VALUE": -1
+      },
+      "SURFACE_TYPE": ""
+    }
+  },
+  {
+    "message_type": "bad",
+    "incoming": "COMM: |(100, 36)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -241,35 +297,7 @@
     "got": {
       "ACTION": "COMM",
       "TARGET": {
-        "COORDINATE": "(5, 22)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "comm",
-    "incoming": "Status report: CRITICAL from (35, 45).",
-    "expected": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(35, 45)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
+        "COORDINATE": "(100, 36)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
@@ -281,343 +309,7 @@
   },
   {
     "message_type": "bad",
-    "incoming": "Maybe sample something near (100, 97)?",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "SAMPLE",
-      "TARGET": {
-        "COORDINATE": "(100, 97)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Send a communication from (44, 85).",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(44, 85)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Maybe sample something near (70, 37)?",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "SAMPLE",
-      "TARGET": {
-        "COORDINATE": "(70, 37)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Maybe sample something near (41, 11)?",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "SAMPLE",
-      "TARGET": {
-        "COORDINATE": "(41, 11)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Send a communication from (49, 99).",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(49, 99)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "comm",
-    "incoming": "Status report: CRITICAL from (3, 65).",
-    "expected": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(3, 65)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Communication missing status at (30, 6).",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(30, 6)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Send a communication from (12, 16).",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(12, 16)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Maybe sample something near (94, 19)?",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "SAMPLE",
-      "TARGET": {
-        "COORDINATE": "(94, 19)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "ROCK",
-        "VALUE": 1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Communication missing status at (15, 83).",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(15, 83)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Land on (27, 93)",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "LAND",
-      "TARGET": {
-        "COORDINATE": "(27, 93)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "comm",
-    "incoming": "Status report: CRITICAL from (59, 64).",
-    "expected": {
-      "ACTION": "COMM",
-      "TARGET": {
-        "COORDINATE": "(59, 64)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Communication missing status at (54, 61).",
+    "incoming": "SAMPLE:METAL|5|(66, 35)",
     "expected": {
       "ACTION": "REPEAT",
       "TARGET": {
@@ -633,35 +325,7 @@
     "got": {
       "ACTION": "REPEAT",
       "TARGET": {
-        "COORDINATE": "(54, 61)",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    }
-  },
-  {
-    "message_type": "bad",
-    "incoming": "Land on (14, 28)",
-    "expected": {
-      "ACTION": "REPEAT",
-      "TARGET": {
-        "COORDINATE": "",
-        "OBJECT": ""
-      },
-      "MATERIAL_DETAIL": {
-        "MATERIAL_TYPE": "",
-        "VALUE": -1
-      },
-      "SURFACE_TYPE": ""
-    },
-    "got": {
-      "ACTION": "LAND",
-      "TARGET": {
-        "COORDINATE": "(14, 28)",
+        "COORDINATE": "(66, 35)",
         "OBJECT": ""
       },
       "MATERIAL_DETAIL": {
