@@ -1,11 +1,13 @@
+import os
 import numpy as np
 import json
 import matplotlib.pyplot as plt
 import re
 import pandas as pd
 import seaborn as sns
-from collections import Counter
+import textwrap
 
+from collections import Counter
 from overcooked import World
 
 result_files = [
@@ -118,10 +120,9 @@ def replay(level, num_agents, files):
     return output
 
 def normalize_pattern(sentence):
-    sentence = sentence.lower()
     sentence = re.sub(r'agent\d+', 'agent', sentence)
     sentence = re.sub(r'blender\d+|storage\d+|servingtable\d+|pot\d+|mixer\d+|chopboard\d+|pan\d+|fryer\d+|steamer\d+|oven\d+', 'tool', sentence)
-    sentence = re.sub(r'salmon|flour|salmonMeatcake|salmonSashimi|cookedRice|rice|tuna', 'item', sentence)
+    sentence = re.sub(r'salmonMeatcake|salmonSashimi|tunaSashimi|cookedRice|salmon|flour|rice|tuna', 'item', sentence)
     return sentence.strip()
 
 def parse_failure_data(file_path):
@@ -140,7 +141,9 @@ def parse_failure_data(file_path):
             elif line == '--------------------------------------------------' or not line:
                 continue
             else:
-                normalized_cat = normalize_pattern(line.split(':')[0])
+                normalized_cat = normalize_pattern(line.split(':')[0]).strip()
+                if normalized_cat:
+                    normalized_cat = normalized_cat[0].upper() + normalized_cat[1:]
                 pattern_set.add(normalized_cat)
                 match = re.match(r"(.+): (\d+)", line)
                 if match:
@@ -159,36 +162,48 @@ def aggregate_and_plot(df, top_n=20):
     # Pivot for barplot
     pivot_df = grouped.pivot(index='Category', columns='Config', values='Count').fillna(0)
 
-    # Step 1: Reset index and melt to long-form
     df_melted = pivot_df.reset_index().melt(id_vars='Category', var_name='Config', value_name='Count')
+    df_melted['Category'] = df_melted['Category'].apply(lambda x: '\n'.join(textwrap.wrap(x, width=50)))
 
-    # Sort categories by total count for better visualization
+    sns.set_theme(style="whitegrid", context="talk")
+    plt.figure(figsize=(16, 10))
+
+    # Reorder categories by total count
     category_order = df_melted.groupby('Category')['Count'].sum().sort_values(ascending=False).index
 
-    # Set a larger font scale
-    sns.set_context("talk", font_scale=1.2)  # 'talk' context is good for presentations
+    # Use a color palette that is both vibrant and accessible
+    palette = sns.color_palette("Set2", n_colors=df_melted['Config'].nunique())
 
-    # Create the grouped bar plot
-    plt.figure(figsize=(16, 12))
-    sns.set(style="whitegrid")
-    sns.barplot(
+    # Draw the barplot
+    barplot = sns.barplot(
         data=df_melted,
         y='Category',
         x='Count',
         hue='Config',
-        order=category_order
+        order=category_order,
+        palette=palette,
+        edgecolor='black'
     )
 
-    # Aesthetic tweaks
-    plt.title('Comparison of NL vs Structured for Each Failure Reason', fontsize=20)
-    plt.xlabel('Count', fontsize=16)
-    plt.ylabel('Failure Reason', fontsize=16)
+    # Add count labels on the bars
+    for container in barplot.containers:
+        barplot.bar_label(container, fmt='%d', label_type='edge', fontsize=10, padding=3)
+
+    # Titles and labels
+    plt.title('Comparison of NL vs Structured for Each Failure Reason', fontsize=22, weight='bold')
+    plt.xlabel('Total Feedback Count', fontsize=16)
+    plt.ylabel('Failure Reason Category', fontsize=16)
+
+    # Customize ticks
     plt.xticks(fontsize=14)
-    plt.yticks(fontsize=12)
-    plt.legend(fontsize=12, loc='upper right')
+    plt.yticks(fontsize=16)
+
+    # Move legend outside plot if many categories
+    plt.legend(title='Config Type', title_fontsize=14, fontsize=12, loc='lower right')
+
+    # Clean layout
     plt.tight_layout()
-    
-    plt.savefig('figs/feedbacks_aggregated.png', dpi=300)
+    plt.savefig('figs/feedbacks_aggregated.png', dpi=300, bbox_inches='tight')
 
 def draw_feedback():
     file_path = 'feedbacks.txt'
@@ -202,8 +217,9 @@ if __name__ == "__main__":
     # draw('level_0', level_0)
     # draw('level_3', level_3)
 
-    output = replay(level='level_0', num_agents=2, files=level_0)
-    output += replay(level='level_3', num_agents=3, files=level_3)
-    with open('feedbacks.txt', 'w') as f:
-        f.write(output)
+    if not os.path.exists("feedbacks.txt"):
+        output = replay(level='level_0', num_agents=2, files=level_0)
+        output += replay(level='level_3', num_agents=3, files=level_3)
+        with open('feedbacks.txt', 'w') as f:
+            f.write(output)
     draw_feedback()
