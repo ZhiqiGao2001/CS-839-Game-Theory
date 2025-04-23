@@ -1,0 +1,309 @@
+
+###
+This is an example you can use as a reference for another game of a different level.
+In this game, there are totally 2 agents available: agent0, agent1
+Your name is agent0.
+
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 17
+current game step: 0
+maximum game steps: 30
+
+-agent state:
+at(agent0, servingtable0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: None
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+((0)[salmonMeatcake], flour, storage0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 16
+current game step: 1
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, storage0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmon, storage0)
+
+***
+-action:
+get_flour_storage0
+
+-broadcast:
+((0)[salmonMeatcake], salmonMeatcake, blender0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 15
+current game step: 2
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, flour)
+at(agent1, storage0)
+hold(agent1, salmon)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, blender0)
+
+***
+-action:
+goto_blender0
+
+-broadcast:
+((0)[salmonMeatcake], salmonMeatcake, blender0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 14
+current game step: 3
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, salmon)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, blender0)
+
+***
+-action:
+put_blender0
+
+-broadcast:
+((0)[salmonMeatcake], salmonMeatcake, blender0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 13
+current game step: 4
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, None)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour&salmon)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, blender0)
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+(future_task, flour, storage0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 12
+current game step: 5
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, salmonMeatcake)
+occupy(blender0)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, blender0)
+
+***
+-action:
+get_flour_storage0
+
+-broadcast:
+(future_task, salmonMeatcake, blender0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 11
+current game step: 6
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, salmonMeatcake)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, servingtable0)
+
+***
+-action:
+goto_blender0
+
+-broadcast:
+(future_task, salmonMeatcake, blender0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 10
+    name: salmonMeatcake lifetime: 17
+current game step: 7
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, salmonMeatcake)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, servingtable0)
+
+***
+-action:
+put_blender0
+
+-broadcast:
+((1)[salmonMeatcake], salmon, storage0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 9
+    name: salmonMeatcake lifetime: 16
+current game step: 8
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, salmonMeatcake)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: ((0)[salmonMeatcake], salmonMeatcake, servingtable0)
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+((1)[salmonMeatcake], salmon, storage0)
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 15
+current game step: 9
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour)
+
+-accomplished task:
+salmonMeatcake,
+
+-peers' broadcast messages:
+agent1: ((1)[salmonMeatcake], salmon, storage0)
+
+***
+-action:
+get_salmon_storage0
+
+-broadcast:
+((0)[salmonMeatcake], salmonMeatcake, blender0)

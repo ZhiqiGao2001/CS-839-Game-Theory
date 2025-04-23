@@ -3,3 +3,7 @@
 project/results/game1
 project/results/game2
 project/results/game3
+
+project/llm_overcooked/key.txt
+project/llm_overcooked/~key.txt
+**/__pycache__/

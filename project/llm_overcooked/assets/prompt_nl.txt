@@ -1,0 +1,309 @@
+
+###
+This is an example you can use as a reference for another game of a different level.
+In this game, there are totally 2 agents available: agent0, agent1
+Your name is agent0.
+
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 17
+current game step: 0
+maximum game steps: 30
+
+-agent state:
+at(agent0, servingtable0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: Initial state, nothing to broadcast
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+I am currently working on the only task (salmonMeatcake), there is nothing on the blender, so I plan to go to the storage and get flour.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 16
+current game step: 1
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, storage0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the salmonMeatcake task, and I plan to go to the storage and get some salmon as an ingredient.
+
+***
+-action:
+get_flour_storage0
+
+-broadcast:
+I am working on the task (salmonMeatcake), and I have been at the storage and got flour, so I plan to take the flour to the blender.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 15
+current game step: 2
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, flour)
+at(agent1, storage0)
+hold(agent1, salmon)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the salmonMeatcake task, and I plan to go to the blender and put the salmon on that.
+
+***
+-action:
+goto_blender0
+
+-broadcast:
+I am working on the salmonMeatcake task, and I plan to go to the blender and put the flour on that.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 14
+current game step: 3
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, salmon)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the salmonMeatcake task, and I plan to go to the blender and put the salmon on that.
+
+***
+-action:
+put_blender0
+
+-broadcast:
+I am working on the salmonMeatcake task, and since my partner will work on the blender, I will go back to the storage and prepare for next salmonMeatcake.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 13
+current game step: 4
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, None)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour&salmon)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the salmonMeatcake, and I will activate the blender.
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+I am working on the next possible salmonMeatcake task, and I will get some flour first.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 12
+current game step: 5
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, salmonMeatcake)
+occupy(blender0)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the current salmonMeatcake, and I will wait for the blender to finish.
+
+***
+-action:
+get_flour_storage0
+
+-broadcast:
+I am working on the possible next salmonMeatcake task, and I plan to go to the blender and put flour to the blender.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 11
+current game step: 6
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, salmonMeatcake)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the current salmonMeatcake task, and I will get the cake to the servingtable.
+
+***
+-action:
+goto_blender0
+
+-broadcast:
+I am working on the next salmonMeatcake task, and I plan to put the flour onto the blender.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 10
+    name: salmonMeatcake lifetime: 17
+current game step: 7
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, flour)
+at(agent1, blender0)
+hold(agent1, salmonMeatcake)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, None)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the first salmonMeatcake task, and I am going to the servingtable.
+
+***
+-action:
+put_blender0
+
+-broadcast:
+I am working on the second salmonMeatcake task, and since there is no salmon on the blender, I will go back to the storage and get some.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 9
+    name: salmonMeatcake lifetime: 16
+current game step: 8
+maximum game steps: 30
+
+-agent state:
+at(agent0, blender0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, salmonMeatcake)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour)
+
+-accomplished task:
+
+-peers' broadcast messages:
+agent1: I am working on the first salmonMeatcake task, and I will put the salmonMeatcake on the servingtable.
+
+***
+-action:
+goto_storage0
+
+-broadcast:
+I am working on the second salmonMeatcake, and I will get some salmon from the storage.
+***
+-game state:
+current game level: level_0
+current dishes:
+    name: salmonMeatcake lifetime: 15
+current game step: 9
+maximum game steps: 30
+
+-agent state:
+at(agent0, storage0)
+hold(agent0, None)
+at(agent1, servingtable0)
+hold(agent1, None)
+
+-kitchen state:
+inside(storage0, None)
+inside(servingtable0, None)
+inside(blender0, flour)
+
+-accomplished task:
+salmonMeatcake,
+
+-peers' broadcast messages:
+agent1: I am working on the current salmonMeatcake, and I will go to the blender and prepare to activate that.
+
+***
+-action:
+get_salmon_storage0
+
+-broadcast:
+I am working on the current salmonMeatcake, and I will go to the blender and put the salmon onto it.
