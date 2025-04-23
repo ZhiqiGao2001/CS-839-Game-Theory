@@ -1,0 +1,449 @@
+Feedback categories for result_level_0_2_gpt-4o_struct.json with alpha 1.0:
+blender0 is occupied, therefore cannot be activated: 15
+agent1 is not located in blender0: 7
+activating blender0 will result in waste: 1
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 1
+agent0 is not located in blender0: 3
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 2
+agent1 is not allowed to pick up from blender0 at this point: 4
+agent1 is not located in storage0: 1
+None of the agents performed any actions which is not normal.: 2
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_struct.json with alpha 1.5:
+blender0 is occupied, therefore cannot be activated: 18
+agent0 is not located in blender0: 4
+agent1 is not located in blender0: 9
+agent1 is not allowed to pick up from blender0 at this point: 7
+None of the agents performed any actions which is not normal.: 1
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 1
+agent1 is not located in storage0: 1
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_struct.json with alpha 2.0:
+blender0 is occupied, therefore cannot be activated: 12
+agent0 is not located in blender0: 3
+agent1 is not located in blender0: 9
+agent1 is not allowed to pick up from blender0 at this point: 6
+activating blender0 will result in waste: 2
+None of the agents performed any actions which is not normal.: 1
+putting salmon into blender0 will result in waste: 33
+putting flour into blender0 will result in waste: 1
+for agent1, tool agent0 is not in the current game level: 1
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_struct.json with alpha 2.5:
+blender0 is occupied, therefore cannot be activated: 16
+agent1 is not located in blender0: 11
+agent0 is not located in blender0: 1
+agent1 is not allowed to pick up from blender0 at this point: 6
+putting salmon into blender0 will result in waste: 3
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 2
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_struct.json with alpha 3.0:
+blender0 is occupied, therefore cannot be activated: 16
+agent1 is not allowed to pick up from blender0 at this point: 9
+agent1 is not located in blender0: 5
+agent0 is not located in blender0: 1
+putting flour into blender0 will result in waste: 1
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_nl.json with alpha 1.0:
+None of the agents performed any actions which is not normal.: 2
+agent0 is not holding objects, therefore cannot put objects into the tool: 1
+putting flour into blender0 will result in waste: 37
+putting salmon into blender0 will result in waste: 8
+agent1 is holding objects, therefore cannot activate tools: 1
+agent0 is holding objects, therefore cannot get objects from the tool: 1
+flour is not any dish needed in this level and cannot be put on servingtable0: 1
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 2
+agent0 is not located in blender0: 1
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 3
+agent1 is not holding objects, therefore cannot put objects into the tool: 1
+agent0 is holding objects, therefore cannot activate tools: 1
+agent0 is not allowed to pick up from blender0 at this point: 2
+agent1 is not located in blender0: 7
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_nl.json with alpha 1.5:
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 3
+agent0 is not located in blender0: 3
+putting salmon into blender0 will result in waste: 7
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 3
+agent1 is not located in blender0: 2
+putting flour into blender0 will result in waste: 48
+agent1 is not holding objects, therefore cannot put objects into the tool: 3
+None of the agents performed any actions which is not normal.: 1
+agent0 is holding objects, therefore cannot activate tools: 1
+agent0 is not located in storage0: 3
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_nl.json with alpha 2.0:
+None of the agents performed any actions which is not normal.: 24
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 3
+agent0 is not holding objects, therefore cannot put objects into the tool: 1
+putting salmon into blender0 will result in waste: 17
+putting flour into blender0 will result in waste: 33
+agent1 is holding objects, therefore cannot activate tools: 2
+agent1 is holding objects, therefore cannot get objects from the tool: 2
+salmon is not any dish needed in this level and cannot be put on servingtable0: 1
+agent1 is not holding objects, therefore cannot put objects into the tool: 3
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 2
+agent1 is not allowed to pick up from servingtable0 at this point: 1
+activating blender0 will result in waste: 1
+flour is not any dish needed in this level and cannot be put on servingtable0: 1
+agent0 is not located in blender0: 7
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_nl.json with alpha 2.5:
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 3
+agent1 is not located in storage0: 1
+None of the agents performed any actions which is not normal.: 7
+agent1 is not holding objects, therefore cannot put objects into the tool: 2
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 1
+putting flour into blender0 will result in waste: 1
+agent0 is not located in blender0: 4
+putting salmon into blender0 will result in waste: 1
+--------------------------------------------------
+Feedback categories for result_level_0_2_gpt-4o_nl.json with alpha 3.0:
+blender0 is occupied, therefore agent0 cannot get objects from the tool: 5
+None of the agents performed any actions which is not normal.: 3
+blender0 is occupied, therefore agent1 cannot get objects from the tool: 5
+agent1 is holding objects, therefore cannot activate tools: 1
+agent1 is not holding objects, therefore cannot put objects into the tool: 1
+putting flour into blender0 will result in waste: 2
+agent1 is holding objects, therefore cannot get objects from the tool: 8
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_struct.json with alpha 1.0:
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 18
+activating mixer0 will result in waste: 14
+agent1 is not allowed to pick up from mixer0 at this point: 3
+agent2 is not allowed to pick up from mixer0 at this point: 3
+agent0 is not located in storage0: 1
+agent1 is not located in storage0: 4
+agent2 is not located in chopboard1: 4
+pot0 is occupied, therefore cannot be activated: 5
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 10
+agent1 is not allowed to pick up from pot0 at this point: 4
+agent2 is not located in storage0: 5
+agent2 is not allowed to pick up from pot0 at this point: 4
+agent2 is not holding objects, therefore cannot put objects into the tool: 4
+activating mixer1 will result in waste: 11
+agent1 is not holding objects, therefore cannot put objects into the tool: 5
+agent0 is not located in mixer0: 9
+agent1 is not located in mixer0: 5
+agent0 is not holding objects, therefore cannot put objects into the tool: 2
+agent1 is not allowed to pick up from mixer1 at this point: 2
+agent2 is not allowed to pick up from mixer1 at this point: 3
+agent2 can only pickup base ingredients from the storage: 1
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 5
+putting tunaSashimi into mixer1 will result in waste: 3
+agent2 is not located in pot0: 1
+agent2 is not located in mixer0: 3
+agent1 can only pickup base ingredients from the storage: 2
+agent1 is not located in pot0: 1
+agent2 is not located in chopboard0: 4
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_struct.json with alpha 1.5:
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 15
+agent2 is not holding objects, therefore cannot put objects into the tool: 8
+agent2 is not located in pot0: 2
+agent0 is not located in mixer0: 14
+agent1 is not located in mixer0: 8
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 11
+agent1 is not holding objects, therefore cannot put objects into the tool: 5
+activating mixer1 will result in waste: 7
+agent0 is not located in storage0: 2
+activating mixer0 will result in waste: 23
+agent1 is not located in pot0: 1
+agent2 is not located in chopboard1: 1
+agent2 is not located in pot1: 4
+agent2 is not allowed to pick up from mixer1 at this point: 3
+agent1 is not allowed to pick up from mixer1 at this point: 2
+chopboard1 is empty, you cannot get anything from there: 2
+agent2 is not located in storage0: 4
+agent1 is not located in chopboard1: 2
+agent1 is not allowed to pick up from mixer0 at this point: 1
+agent2 is not allowed to pick up from mixer0 at this point: 4
+chopboard0 is occupied, therefore cannot be activated: 1
+agent1 is not located in storage0: 1
+pot0 is occupied, therefore cannot be activated: 2
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 5
+agent1 is not allowed to pick up from pot0 at this point: 2
+agent2 is not allowed to pick up from pot0 at this point: 5
+chopboard0 is empty, you cannot get anything from there: 2
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_struct.json with alpha 2.0:
+pot1 is occupied, therefore agent0 cannot get objects from the tool: 2
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 9
+activating mixer0 will result in waste: 18
+agent1 is not allowed to pick up from mixer0 at this point: 3
+agent2 is not allowed to pick up from mixer0 at this point: 2
+chopboard0 is occupied, therefore cannot be activated: 1
+chopboard0 is empty, you cannot get anything from there: 1
+agent2 is not located in pot0: 15
+agent1 is not located in pot0: 4
+agent1 is not holding objects, therefore cannot put objects into the tool: 5
+agent1 is not located in mixer0: 2
+agent2 is not located in mixer0: 4
+pot0 is occupied, therefore cannot be activated: 2
+agent2 is not holding objects, therefore cannot put objects into the tool: 8
+activating mixer1 will result in waste: 4
+agent2 is not located in mixer1: 2
+agent1 is not allowed to pick up from pot0 at this point: 1
+agent2 is not allowed to pick up from mixer1 at this point: 3
+agent2 is not located in storage0: 2
+agent0 is not located in pot0: 15
+agent2 is not allowed to pick up from pot0 at this point: 4
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 2
+agent0 is not holding objects, therefore cannot put objects into the tool: 4
+agent0 is not located in chopboard0: 14
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 1
+putting salmon into chopboard0 will result in waste: 10
+agent0 is not located in chopboard1: 7
+putting salmon into mixer0 will result in waste: 1
+agent2 is holding objects, therefore cannot activate tools: 1
+agent1 is not allowed to pick up from mixer1 at this point: 1
+agent1 is not located in storage0: 1
+chopboard1 is occupied, therefore cannot be activated: 1
+agent0 is not allowed to pick up from mixer0 at this point: 1
+agent0 is not located in mixer1: 1
+agent0 is not allowed to pick up from mixer1 at this point: 6
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_struct.json with alpha 2.5:
+chopboard0 is occupied, therefore cannot be activated: 3
+chopboard0 is empty, you cannot get anything from there: 3
+pot0 is occupied, therefore cannot be activated: 1
+pot1 is occupied, therefore agent0 cannot get objects from the tool: 6
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 8
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 6
+agent2 is not allowed to pick up from pot0 at this point: 2
+activating mixer0 will result in waste: 21
+putting tunaSashimi into mixer0 will result in waste: 1
+agent2 is not located in storage0: 11
+agent1 is not located in pot0: 3
+agent2 is not located in pot0: 4
+agent1 is not holding objects, therefore cannot put objects into the tool: 3
+agent2 is not holding objects, therefore cannot put objects into the tool: 4
+putting cookedRice into mixer0 will result in waste: 1
+agent1 is not located in mixer0: 10
+chopboard1 is occupied, therefore cannot be activated: 1
+chopboard1 is empty, you cannot get anything from there: 1
+putting tunaSashimi into pot0 will result in waste: 1
+pot1 is occupied, therefore agent2 cannot get objects from the tool: 2
+agent0 is not holding objects, therefore cannot put objects into the tool: 3
+agent0 is not located in chopboard0: 1
+agent1 is not allowed to pick up from mixer0 at this point: 4
+agent1 is not located in storage0: 2
+pot1 is occupied, therefore cannot be activated: 1
+agent2 is not located in mixer0: 2
+agent2 is not allowed to pick up from mixer0 at this point: 1
+agent0 is not located in pot1: 2
+agent2 is not located in pot1: 1
+agent2 is not allowed to pick up from pot1 at this point: 1
+activating mixer1 will result in waste: 3
+agent2 is not allowed to pick up from mixer1 at this point: 1
+agent0 is not located in pot0: 4
+agent0 is not allowed to pick up from pot0 at this point: 2
+agent2 is not located in chopboard1: 1
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_struct.json with alpha 3.0:
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 4
+agent2 is not located in pot1: 4
+None of the agents performed any actions which is not normal.: 2
+agent1 is not located in storage0: 3
+chopboard1 is occupied, therefore cannot be activated: 2
+activating mixer0 will result in waste: 17
+agent2 is not allowed to pick up from mixer0 at this point: 6
+pot0 is occupied, therefore cannot be activated: 1
+agent0 is not holding objects, therefore cannot put objects into the tool: 3
+agent1 is not located in pot0: 2
+agent1 is not allowed to pick up from mixer1 at this point: 1
+chopboard0 is occupied, therefore cannot be activated: 3
+agent1 is not located in mixer0: 1
+putting rice into pot1 will result in waste: 9
+agent0 is not allowed to pick up from mixer1 at this point: 2
+agent0 is not located in pot0: 18
+agent2 is not located in storage0: 1
+agent0 is not located in pot1: 1
+agent2 is not allowed to pick up from mixer1 at this point: 4
+activating mixer1 will result in waste: 1
+pot1 is occupied, therefore agent0 cannot get objects from the tool: 2
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 2
+agent1 is not allowed to pick up from mixer0 at this point: 1
+chopboard0 is empty, you cannot get anything from there: 1
+agent2 is not allowed to pick up from pot0 at this point: 1
+putting tuna into chopboard0 will result in waste: 3
+agent2 is not located in chopboard1: 3
+agent1 is not located in chopboard1: 3
+putting tuna into mixer0 will result in waste: 1
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_nl.json with alpha 1.0:
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 7
+pot1 is occupied, therefore agent2 cannot get objects from the tool: 2
+activating mixer0 will result in waste: 7
+agent0 is not located in mixer0: 28
+agent1 is not located in mixer0: 1
+pot0 is occupied, therefore cannot be activated: 3
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 7
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 6
+agent2 is not holding objects, therefore cannot put objects into the tool: 2
+activating mixer1 will result in waste: 6
+agent2 is not allowed to pick up from mixer1 at this point: 2
+chopboard0 is empty, you cannot get anything from there: 3
+putting tunaSashimi into mixer1 will result in waste: 10
+agent2 is holding objects, therefore cannot activate tools: 2
+agent2 is not located in servingtable0: 1
+pot1 is occupied, therefore agent0 cannot get objects from the tool: 2
+agent1 is not holding objects, therefore cannot put objects into the tool: 1
+agent2 is not located in chopboard1: 5
+agent0 is not located in storage0: 2
+chopboard1 is occupied, therefore cannot be activated: 1
+chopboard1 is empty, you cannot get anything from there: 1
+agent0 is not holding objects, therefore cannot put objects into the tool: 2
+agent1 is not located in pot0: 1
+agent2 is not located in pot0: 12
+putting salmon into chopboard0 will result in waste: 19
+agent1 is holding objects, therefore cannot activate tools: 1
+agent1 is holding objects, therefore cannot get objects from the tool: 1
+chopboard0 is occupied, therefore cannot be activated: 2
+agent1 can only pickup base ingredients from the storage: 6
+putting salmonSashimi into mixer0 will result in waste: 3
+agent2 is not allowed to pick up from mixer0 at this point: 3
+agent2 can only pickup base ingredients from the storage: 5
+agent1 is not located in storage0: 6
+agent2 is not located in storage0: 1
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_nl.json with alpha 1.5:
+pot0 is occupied, therefore cannot be activated: 1
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 3
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 7
+agent2 is not located in pot0: 2
+activating mixer0 will result in waste: 7
+agent0 is not holding objects, therefore cannot put objects into the tool: 2
+activating mixer1 will result in waste: 10
+putting salmonSashimi into mixer1 will result in waste: 9
+agent1 is not allowed to pick up from mixer1 at this point: 1
+chopboard0 is occupied, therefore cannot be activated: 4
+chopboard0 is empty, you cannot get anything from there: 2
+agent1 is holding objects, therefore cannot get objects from the tool: 2
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 4
+agent1 is not holding objects, therefore cannot put objects into the tool: 4
+agent2 is not located in storage0: 19
+agent2 is not located in pot1: 1
+agent0 is not located in pot0: 2
+agent1 is not located in pot0: 10
+agent2 is not holding objects, therefore cannot put objects into the tool: 3
+agent2 is not allowed to pick up from pot0 at this point: 1
+agent1 is not located in mixer0: 1
+agent0 is not located in servingtable0: 1
+putting salmon into chopboard0 will result in waste: 1
+agent1 is holding objects, therefore cannot activate tools: 2
+putting tunaSashimi into mixer0 will result in waste: 1
+agent0 is holding objects, therefore cannot activate tools: 3
+pot0 is empty, therefore cannot be activated: 1
+tunaSashimi is not any dish needed in this level and cannot be put on servingtable0: 1
+putting tuna into chopboard0 will result in waste: 4
+agent0 is holding objects, therefore cannot get objects from the tool: 1
+agent0 is not located in chopboard1: 1
+salmonSashimi is not any dish needed in this level and cannot be put on servingtable0: 1
+putting cookedRice into mixer0 will result in waste: 2
+agent0 is not located in storage0: 1
+putting salmon into mixer0 will result in waste: 5
+agent1 is not located in storage0: 5
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_nl.json with alpha 2.0:
+agent1 is not located in chopboard1: 4
+putting tuna into chopboard1 will result in waste: 14
+agent0 is not located in storage0: 5
+agent2 is not located in storage0: 2
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 4
+agent0 is not located in pot1: 15
+putting salmon into chopboard1 will result in waste: 20
+agent2 is holding objects, therefore cannot activate tools: 14
+agent1 is not holding objects, therefore cannot put objects into the tool: 7
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 5
+agent0 is not located in pot0: 6
+putting salmon into mixer0 will result in waste: 2
+agent2 is not located in mixer1: 2
+agent0 is not located in chopboard1: 1
+chopboard0 is occupied, therefore cannot be activated: 1
+chopboard0 is empty, you cannot get anything from there: 1
+agent2 is not holding objects, therefore cannot put objects into the tool: 3
+activating mixer0 will result in waste: 5
+agent1 is not allowed to pick up from mixer0 at this point: 2
+agent2 is not located in mixer0: 3
+agent1 is not located in pot0: 1
+agent1 is not allowed to pick up from pot0 at this point: 4
+putting tunaSashimi into mixer1 will result in waste: 3
+agent0 is not holding objects, therefore cannot put objects into the tool: 4
+putting tunaSashimi into chopboard0 will result in waste: 4
+agent2 is holding objects, therefore cannot get objects from the tool: 3
+activating mixer1 will result in waste: 6
+agent1 is not located in mixer1: 1
+agent1 is not located in mixer0: 5
+putting tunaSashimi into mixer0 will result in waste: 2
+putting salmonSashimi into mixer1 will result in waste: 8
+for agent0, tool agent1 is not in the current game level: 1
+putting tuna into chopboard0 will result in waste: 3
+agent1 is not located in chopboard0: 1
+agent2 is not located in chopboard0: 1
+agent2 can only pickup base ingredients from the storage: 2
+agent0 can only pickup base ingredients from the storage: 1
+putting salmonSashimi into mixer0 will result in waste: 2
+putting salmonSashimi into pot0 will result in waste: 1
+putting cookedRice into mixer0 will result in waste: 1
+agent1 is holding objects, therefore cannot activate tools: 1
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_nl.json with alpha 2.5:
+agent1 is not located in chopboard1: 1
+putting tuna into chopboard1 will result in waste: 2
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 8
+putting tuna into chopboard0 will result in waste: 28
+agent0 is not holding objects, therefore cannot put objects into the tool: 1
+agent1 is holding objects, therefore cannot activate tools: 3
+agent1 is holding objects, therefore cannot get objects from the tool: 3
+putting salmon into chopboard1 will result in waste: 54
+agent0 is holding objects, therefore cannot activate tools: 4
+pot0 is occupied, therefore agent1 cannot get objects from the tool: 11
+agent1 is not located in pot0: 3
+putting salmon into chopboard0 will result in waste: 2
+agent2 is holding objects, therefore cannot activate tools: 1
+agent2 is not located in chopboard1: 1
+chopboard0 is occupied, therefore cannot be activated: 1
+chopboard0 is empty, you cannot get anything from there: 1
+agent0 is not located in storage0: 2
+activating mixer0 will result in waste: 4
+agent0 is not located in mixer0: 21
+agent0 is not located in mixer1: 1
+putting cookedRice into chopboard0 will result in waste: 1
+agent1 is not holding objects, therefore cannot put objects into the tool: 2
+pot0 is occupied, therefore cannot be activated: 1
+chopboard1 is occupied, therefore cannot be activated: 1
+chopboard1 is empty, you cannot get anything from there: 1
+agent2 is not allowed to pick up from mixer0 at this point: 1
+agent2 is not located in storage0: 7
+agent1 is not located in chopboard0: 4
+agent0 is holding objects, therefore cannot get objects from the tool: 2
+agent2 is not holding objects, therefore cannot put objects into the tool: 1
+agent2 is not located in chopboard0: 2
+--------------------------------------------------
+Feedback categories for result_level_3_3_gpt-4o_nl.json with alpha 3.0:
+chopboard0 is occupied, therefore cannot be activated: 5
+chopboard0 is empty, you cannot get anything from there: 5
+pot1 is occupied, therefore agent1 cannot get objects from the tool: 1
+pot0 is occupied, therefore agent2 cannot get objects from the tool: 1
+agent1 is not located in pot1: 3
+agent2 is not located in pot0: 14
+agent1 is not holding objects, therefore cannot put objects into the tool: 6
+pot0 is occupied, therefore agent0 cannot get objects from the tool: 7
+activating mixer0 will result in waste: 10
+agent2 can only pickup base ingredients from the storage: 2
+agent2 is not holding objects, therefore cannot put objects into the tool: 1
+activating mixer1 will result in waste: 7
+agent2 is not allowed to pick up from mixer1 at this point: 7
+putting tunaSashimi into mixer0 will result in waste: 3
+agent0 is not allowed to pick up from mixer0 at this point: 1
+agent0 is not holding objects, therefore cannot put objects into the tool: 1
+agent1 is not located in chopboard0: 4
+agent1 is not located in storage0: 7
+pot1 is occupied, therefore agent2 cannot get objects from the tool: 1
+putting tunaSashimi into mixer1 will result in waste: 13
+agent0 is not located in chopboard0: 9
+agent1 is not allowed to pick up from mixer0 at this point: 1
+agent2 is not allowed to pick up from mixer0 at this point: 2
+agent2 is not located in chopboard0: 1
+--------------------------------------------------

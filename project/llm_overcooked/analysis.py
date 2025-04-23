@@ -1,6 +1,12 @@
 import numpy as np
 import json
 import matplotlib.pyplot as plt
+import re
+import pandas as pd
+import seaborn as sns
+from collections import Counter
+
+from overcooked import World
 
 result_files = [
     'result_level_0_2_gpt-4o_struct.json',
@@ -65,10 +71,139 @@ def draw(prefix, files):
     plt.tight_layout()
     plt.savefig('figs/' + prefix + '_valid-noop-count.png', dpi=300)
 
+def replay(level, num_agents, files):
+    output = ""
+    for file in files:
+        with open(file, 'r') as f:
+            table = json.load(f)
+
+        alphas = list(table.keys())
+        alphas.sort(key=lambda x: float(x))
+
+        for alpha in alphas:
+            env = World(recipe_filename='./assets/recipe.json', task_filename='./assets/tasks_level_final.json',
+                         level=level, use_task_lifetime_interval_oracle=True,
+                         alpha=float(alpha), beta=2.5, num_agents=num_agents, override_agent=True)
+            max_episode = 3
+            max_steps = env.max_steps
+
+            feedback_histories_list = []
+            feedback_categories = {}
+            for eps_id in range(max_episode):
+                obs = env.reset()
+
+                step = 0
+                feedback_histories = []
+
+                while (step < max_steps):
+                    plan = table[alpha]['action_history'][eps_id][step]
+
+                    if plan:
+                        obs, done, info = env.step(plan)
+                    feedback_histories.append(env.feedback)
+                    if env.feedback:
+                        for feedback in env.feedback:
+                            if feedback not in feedback_categories:
+                                feedback_categories[feedback] = 0
+                            feedback_categories[feedback] += 1
+
+                    step += 1
+                
+                feedback_histories_list.append(feedback_histories)
+
+            output += f"Feedback categories for {file} with alpha {alpha}:\n"
+            for feedback, count in feedback_categories.items():
+                output +=  f"{feedback}: {count}\n"
+            output += "-" * 50 + '\n'
+    return output
+
+def normalize_pattern(sentence):
+    sentence = sentence.lower()
+    sentence = re.sub(r'agent\d+', 'agent', sentence)
+    sentence = re.sub(r'blender\d+|storage\d+|servingtable\d+|pot\d+|mixer\d+|chopboard\d+|pan\d+|fryer\d+|steamer\d+|oven\d+', 'tool', sentence)
+    sentence = re.sub(r'salmon|flour|salmonMeatcake|salmonSashimi|cookedRice|rice|tuna', 'item', sentence)
+    return sentence.strip()
+
+def parse_failure_data(file_path):
+    data = []
+    alpha, config = None, None
+
+    pattern_set = set()
+    with open(file_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            header_match = re.match(r"Feedback categories for (.+?) with alpha ([\d.]+):", line)
+            if header_match:
+                config, alpha = header_match.groups()
+                config = 'Structured' if 'struct' in config else 'NL'
+                alpha = float(alpha)
+            elif line == '--------------------------------------------------' or not line:
+                continue
+            else:
+                normalized_cat = normalize_pattern(line.split(':')[0])
+                pattern_set.add(normalized_cat)
+                match = re.match(r"(.+): (\d+)", line)
+                if match:
+                    category, count = match.groups()
+                    data.append((config, normalized_cat.strip(), int(count)))
+
+    return pd.DataFrame(data, columns=["Config", "Category", "Count"])
+
+def aggregate_and_plot(df, top_n=20):
+    grouped = df.groupby(['Config', 'Category'])['Count'].sum().reset_index()
+    
+    # Get top N categories overall
+    top_categories = grouped.groupby('Category')['Count'].sum().nlargest(top_n).index
+    grouped = grouped[grouped['Category'].isin(top_categories)]
+
+    # Pivot for barplot
+    pivot_df = grouped.pivot(index='Category', columns='Config', values='Count').fillna(0)
+
+    # Step 1: Reset index and melt to long-form
+    df_melted = pivot_df.reset_index().melt(id_vars='Category', var_name='Config', value_name='Count')
+
+    # Sort categories by total count for better visualization
+    category_order = df_melted.groupby('Category')['Count'].sum().sort_values(ascending=False).index
+
+    # Set a larger font scale
+    sns.set_context("talk", font_scale=1.2)  # 'talk' context is good for presentations
+
+    # Create the grouped bar plot
+    plt.figure(figsize=(16, 12))
+    sns.set(style="whitegrid")
+    sns.barplot(
+        data=df_melted,
+        y='Category',
+        x='Count',
+        hue='Config',
+        order=category_order
+    )
+
+    # Aesthetic tweaks
+    plt.title('Comparison of NL vs Structured for Each Failure Reason', fontsize=20)
+    plt.xlabel('Count', fontsize=16)
+    plt.ylabel('Failure Reason', fontsize=16)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=12)
+    plt.legend(fontsize=12, loc='upper right')
+    plt.tight_layout()
+    
+    plt.savefig('figs/feedbacks_aggregated.png', dpi=300)
+
+def draw_feedback():
+    file_path = 'feedbacks.txt'
+    df_failures = parse_failure_data(file_path)
+    aggregate_and_plot(df_failures)
 
 if __name__ == "__main__":
     level_0 = [result_files[0], result_files[1]]
     level_3 = [result_files[2], result_files[3]]
 
-    draw('level_0', level_0)
-    draw('level_3', level_3)
+    # draw('level_0', level_0)
+    # draw('level_3', level_3)
+
+    output = replay(level='level_0', num_agents=2, files=level_0)
+    output += replay(level='level_3', num_agents=3, files=level_3)
+    with open('feedbacks.txt', 'w') as f:
+        f.write(output)
+    draw_feedback()
