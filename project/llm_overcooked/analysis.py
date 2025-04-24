@@ -55,19 +55,19 @@ def draw(prefix, files):
     valid_minus_noop1 = [v - n for v, n in zip(valid_count_list[0], noop_count_list[0])]
     valid_minus_noop2 = [v - n for v, n in zip(valid_count_list[1], noop_count_list[1])]
 
-    fig, ax = plt.subplots(figsize=(10, 6))
-    ax.bar(x - width/2, noop_count_list[0], width, label='noop (Structured)', color="#AED6F1")
-    ax.bar(x - width/2, valid_minus_noop1, width, bottom=noop_count_list[0], label='valid (Structured)', color="#5DADE2")
+    fig, ax = plt.subplots(figsize=(8, 10))
+    ax.bar(x - width/2, noop_count_list[0], width/2, label='noop (Structured)', color="#AED6F1")
+    ax.bar(x - width/2, valid_minus_noop1, width/2, bottom=noop_count_list[0], label='valid (Structured)', color="#5DADE2")
 
-    ax.bar(x + width/2, noop_count_list[1], width, label='noop (NL)', color="#F9E79F")
-    ax.bar(x + width/2, valid_minus_noop2, width, bottom=noop_count_list[1], label='valid (NL)', color="#F4D03F")
+    ax.bar(x + width/2, noop_count_list[1], width/2, label='noop (NL)', color="#F9E79F")
+    ax.bar(x + width/2, valid_minus_noop2, width/2, bottom=noop_count_list[1], label='valid (NL)', color="#F4D03F")
 
-    ax.set_xlabel('Alpha')
-    ax.set_ylabel('Count')
-    ax.set_title('Statistics of valid actions for: ' + prefix)
+    ax.set_xlabel('Alpha', fontsize=16)
+    ax.set_ylabel('Count', fontsize=16)
+    ax.set_title('Statistics of valid actions for: ' + prefix, fontsize=22, weight='bold')
     ax.set_xticks(x)
     ax.set_xticklabels([f'{a}' for a in alphas])
-    ax.legend()
+    ax.legend(fontsize=14)
 
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.tight_layout()
@@ -208,7 +208,7 @@ def aggregate_and_plot(df, top_n=20):
     # Titles and labels
     plt.title('Comparison of NL vs Structured for Each Failure Reason', fontsize=22, weight='bold')
     plt.xlabel('Total Feedback Count', fontsize=16)
-    plt.ylabel('Failure Reason Category', fontsize=16)
+    plt.ylabel('')
 
     # Customize ticks
     plt.xticks(fontsize=14)
