@@ -143,12 +143,12 @@ def parse_failure_data(file_path):
             else:
                 normalized_cat = normalize_pattern(line.split(':')[0]).strip()
                 if normalized_cat:
-                    normalized_cat = normalized_cat[0].upper() + normalized_cat[1:]
+                    normalized_cat = '➣' + normalized_cat[0].upper() + normalized_cat[1:]
                 pattern_set.add(normalized_cat)
                 match = re.match(r"(.+): (\d+)", line)
                 if match:
                     category, count = match.groups()
-                    data.append((config, normalized_cat.strip(), int(count)))
+                    data.append((config, normalized_cat, int(count)))
 
     return pd.DataFrame(data, columns=["Config", "Category", "Count"])
 
@@ -188,6 +188,22 @@ def aggregate_and_plot(df, top_n=20):
     # Add count labels on the bars
     for container in barplot.containers:
         barplot.bar_label(container, fmt='%d', label_type='edge', fontsize=10, padding=3)
+        
+    # Invert x-axis and move y-axis to the right
+    plt.gca().invert_xaxis()
+    plt.gca().yaxis.tick_right()
+    plt.gca().yaxis.set_label_position("right")
+    
+    ax = plt.gca()
+    for label in ax.get_yticklabels():
+        label_text = label.get_text()
+        label.set_bbox(dict(
+            boxstyle='round,pad=0.15',
+            facecolor='#f9f9f9',
+            edgecolor='lightgray',
+            linewidth=1.8
+        ))
+        label.set_horizontalalignment('left')
 
     # Titles and labels
     plt.title('Comparison of NL vs Structured for Each Failure Reason', fontsize=22, weight='bold')
@@ -199,7 +215,7 @@ def aggregate_and_plot(df, top_n=20):
     plt.yticks(fontsize=16)
 
     # Move legend outside plot if many categories
-    plt.legend(title='Config Type', title_fontsize=14, fontsize=12, loc='lower right')
+    plt.legend(title='Config Type', title_fontsize=14, fontsize=12, loc='lower left')
 
     # Clean layout
     plt.tight_layout()
